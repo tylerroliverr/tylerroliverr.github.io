@@ -421,10 +421,10 @@ h4 {
 .toggle {
    display: none;
    position: fixed;
+   z-index: 1;
 }
 
 .nav-mob-mega {
-   width: 400px;
    height: 100vh;
    display: flex;
    justify-content: center;
@@ -433,14 +433,16 @@ h4 {
 }
 
 .nav-mob-link {
-   font-size: 6rem;
-   padding-top: 4rem;
-   padding-bottom: 2rem;
    text-align: right;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
 }
 
 .nav-mob-link a {
    color: #000;
+   font-size: 6rem;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
 }
 
 /* Hire Me Form */
@@ -449,6 +451,10 @@ h4 {
    display: flex;
    justify-content: center;
    padding-top: 2rem;
+}
+
+.close-icon {
+   display: none;
 }
 
 /* Media Queries */
@@ -492,6 +498,11 @@ h4 {
       filter: grayscale(30%);
    }
 
+   .folio-image-right {
+      max-width: 650px;
+      filter: grayscale(30%);
+   }
+
    .folio-title-container-right {
       align-items: center;
    }
@@ -504,6 +515,51 @@ h4 {
 @media screen and (max-width: 650px) {
    h2 {
       font-size: 1.6rem;
+   }
+
+   .folio-image {
+      max-width: 350px;
+   }
+
+   .folio-image-right {
+      max-width: 350px;
+   }
+
+   .folio-title-container {
+      margin-left: 0;
+      margin-bottom: 1.8rem;
+   }
+
+   .folio-image-right {
+      z-index: 0;
+   }
+
+   .folio-grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 550px;
+   }
+
+   .folio-grid-item {
+      margin: 0;
+   }
+
+   .hero-title {
+      font-size: 1rem;
+   }
+
+   h4 {
+      font-size: 1.8rem;
+   }
+
+   .mob-num {
+      font-size: 1rem;
+   }
+
+   .mob-img {
+      width: 90px;
    }
 
    .header {
@@ -528,6 +584,16 @@ h4 {
       display: inline;
       padding-right: 2rem;
       font-size: 1.2rem;
+   }
+
+   .close-icon {
+      padding-right: 2rem;
+      font-size: 1.2rem;
+      color: #000;
+   }
+
+   .navbar {
+      gap: 0px;
    }
 
 }

@@ -4,17 +4,38 @@ function ismatching() {
 }
 
 const menuIcon = document.querySelector(".icon");
+const closeIcon = document.querySelector(".close-icon");
 const megaMenu = document.querySelector(".toggle");
+const megaLink = document.querySelector(".nav-mob-mega");
 
 const menuIconClick = () => {
    if (megaMenu.style.display === "block") {
       megaMenu.style.display = "none";
    } else {
       megaMenu.style.display = "block";
+      menuIcon.style.display = "none";
+      closeIcon.style.display = "block";
    }
-}
+};
+
+const closeMenu = () => {
+   megaMenu.style.display = "none";
+   closeIcon.style.display = "none";
+   menuIcon.style.display = "block";
+};
+
+const megaMenuClose = (e) => {
+   if (megaMenu.style.display === "block") {
+      if (e.target === megaLink) {
+         console.log("working");
+         closeMenu();
+      }
+   }
+};
 
 menuIcon.addEventListener("click", menuIconClick);
+document.addEventListener("click", megaMenuClose);
+
 
 if (!ismatching()) {
 
