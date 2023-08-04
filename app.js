@@ -1,7 +1,20 @@
 function ismatching() {
-   let mql = window.matchMedia('(max-width: 800px)');
+   let mql = window.matchMedia('(max-width: 650px)');
    return mql.matches;
 }
+
+const menuIcon = document.querySelector(".icon");
+const megaMenu = document.querySelector(".toggle");
+
+const menuIconClick = () => {
+   if (megaMenu.style.display === "block") {
+      megaMenu.style.display = "none";
+   } else {
+      megaMenu.style.display = "block";
+   }
+}
+
+menuIcon.addEventListener("click", menuIconClick);
 
 if (!ismatching()) {
 
