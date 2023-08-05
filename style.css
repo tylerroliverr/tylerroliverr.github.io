@@ -28,7 +28,7 @@
 }
 
 body {
-   background-color: var(--blue-color);
+   background-color: var(--light-bkg-color);
    background-image: var(--background-noise);
 }
 
@@ -73,6 +73,7 @@ body {
    display: flex;
    align-items: center;
    margin-left: auto;
+   margin-right: 0.2rem;
 }
 
 /*==========================*/
@@ -134,7 +135,51 @@ body {
 }
 
 .cycling-image {
-   max-height: 300px;
+   max-height: 350px;
    margin-top: 0.9rem;
    margin-bottom: 0.9rem;
+}
+
+
+
+/*=============================*/
+   /*--- DESKTOP QUERIES ---*/
+/*=============================*/
+
+@media screen and (min-width: 768px) {
+   .navbar {
+      margin-left: 0.8rem;
+      margin-right: 0.8rem;
+      margin-top: 0.2rem;
+   }
+
+   .hero-text {
+      max-width: 40%;
+      margin-left: 0.8rem;
+   }
+
+   .local-time-container {
+      margin-right: 0.8rem;
+      margin-bottom: 0.8rem;
+   }
+
+   .project-title-wrapper {
+      margin-left: 0.8rem;
+      margin-top: 0.6rem;
+   }
+
+   @-webkit-keyframes grow {
+      0% { transform: scale(.9); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(.9); }
+   }
+
+   .project-container {
+      min-height: 700px;
+      max-height: 780px;
+   }
+
+   .cycling-image {
+      max-height: 600px;
+   }
 }
