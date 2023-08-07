@@ -26,3 +26,50 @@ window.addEventListener("scroll", function() {
    // Apply the blur effect
    logo.style.filter = `blur(${blurAmount}px)`;
 });
+
+//LIGHT AND DARK THEME
+const lightStar = document.querySelector('.star-light');
+const darkStar = document.querySelector('.star-dark');
+const footer = document.querySelector('.sticky-footer');
+const logo = document.querySelector('.logo');
+const gridText = document.querySelectorAll('.grid-text');
+const timeText = document.querySelector('.time-text');
+const heroLink = document.querySelectorAll('.hero-link');
+const body = document.querySelector('.body');
+
+const handleDarkColorChange = () => {
+   body.className = 'body dark';
+   footer.className = 'sticky-footer dark';
+   logo.className = 'logo dark';
+   timeText.className = 'time-text dark';
+   gridText.forEach((item) => {
+      item.className = 'grid-text dark';
+   });
+   heroLink.forEach((item) => {
+      item.className = 'hero-link dark';
+   });
+};
+
+const handleLightColorChange = () => {
+   body.className = 'body';
+   footer.className = 'sticky-footer';
+   logo.className = 'logo';
+   timeText.className = 'time-text';
+   gridText.forEach((item) => {
+      item.className = 'grid-text';
+   });
+   heroLink.forEach((item) => {
+      item.className = 'hero-link';
+   });
+};
+
+lightStar.addEventListener('click', handleDarkColorChange);
+darkStar.addEventListener('click', handleLightColorChange);
+
+//REAL-TIME
+`use strict`;
+function refreshTime() {
+   var datetime = new Date().toLocaleTimeString();
+   timeText.textContent = datetime;
+}
+   setInterval(refreshTime, 1000);
