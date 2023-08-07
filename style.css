@@ -105,13 +105,12 @@ body {
 }
 
 #before-loading {
-   /*
+   
    display: none;
-   */
+   
 }
 
 #loader {
-   display: none;
 }
 
 /*============================================*/

@@ -1,19 +1,19 @@
-// let timer;
-// let timerLoad;
+let timer;
+let timerLoad;
 
-// function showPage() {
-//    document.getElementById('loader').style.display = 'none';
-//    document.getElementById('before-loading').style.display = 'block';
-// }
+function showPage() {
+   document.getElementById('loader').style.display = 'none';
+   document.getElementById('before-loading').style.display = 'block';
+}
 
-// function pageLoaded () {
-//    document.getElementById('loader').classList.add('loaded');
-// }
+function pageLoaded () {
+   document.getElementById('loader').classList.add('loaded');
+}
 
-// function loadingStar() {
-//    timerLoad = setTimeout(pageLoaded, 3000);
-//    timer = setTimeout(showPage, 3500);
-// }
+function loadingStar() {
+   timerLoad = setTimeout(pageLoaded, 3000);
+   timer = setTimeout(showPage, 3500);
+}
 
 window.addEventListener("scroll", function() {
    const logo = document.querySelector('.logo');
