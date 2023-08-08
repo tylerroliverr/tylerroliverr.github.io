@@ -48,6 +48,8 @@ const handleDarkColorChange = () => {
    heroLink.forEach((item) => {
       item.className = 'hero-link dark';
    });
+   lightStar.style.display = 'none';
+   darkStar.style.display = 'block';
 };
 
 const handleLightColorChange = () => {
@@ -61,6 +63,8 @@ const handleLightColorChange = () => {
    heroLink.forEach((item) => {
       item.className = 'hero-link';
    });
+   lightStar.style.display = 'block';
+   darkStar.style.display = 'none';
 };
 
 lightStar.addEventListener('click', handleDarkColorChange);
@@ -69,7 +73,7 @@ darkStar.addEventListener('click', handleLightColorChange);
 //REAL-TIME
 `use strict`;
 function refreshTime() {
-   var datetime = new Date().toLocaleTimeString();
+   var datetime = new Date().toLocaleTimeString("en-au", { hour12: false});
    timeText.textContent = datetime;
 }
    setInterval(refreshTime, 1000);

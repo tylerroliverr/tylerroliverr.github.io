@@ -43,6 +43,10 @@ body {
    background-image: url(./resources/images/nnnoise.svg);
 }
 
+a {
+   text-decoration: none;
+}
+
 /*============================================*/
       /*===== LOADING ANIMATIONS =====*/
 /*============================================*/
@@ -176,6 +180,7 @@ body {
 
 .grid-text {
    font-size: 1.2rem;
+   color: var(--softblack-color);
 }
 
 .grid-text.dark {
@@ -200,9 +205,11 @@ body {
 .hero-link {
    font-family: var(--styled-font-family);
    border: 1px solid var(--softblack-color);
-   padding: 0px 10px;
-   border-radius: 2rem;
-   font-size: 3rem;
+   padding-left: 15px;
+   padding-right: 15px;
+   border-radius: 5rem;
+   font-size: 5rem;
+   color: var(--softblack-color);
 }
 
 .hero-link.dark {
@@ -217,7 +224,6 @@ body {
 .sticky-footer {
    display: flex;
    border-top: 2px solid var(--softblack-color);
-   padding-top: 12px;
    position: sticky;
    bottom: 0;
    background-color: var(--offwhite-color);
@@ -232,13 +238,9 @@ body {
 }
 
 .time-wrapper {
-   margin-left: auto;
    margin-right: 0.5rem;
    margin-bottom: 0.5rem;
-}
-
-.time-text {
-   margin-left: 0.3rem;
+   margin-top: 0.5rem;
 }
 
 .time-text.dark {
@@ -248,10 +250,9 @@ body {
 
 .star-wrapper {
    margin-bottom: 0.5rem;
+   margin-top: 0.6rem;
    margin-left: 0.5rem;
-   overflow: hidden;
-   white-space: nowrap;
-   width: 100%;
+   margin-right: auto;
 }
 
 .star-light {
@@ -262,6 +263,7 @@ body {
 }
 
 .star-dark {
+   display: none;
    width: 18px;
    cursor: pointer;
    animation: rotate 20s linear infinite;
