@@ -13,14 +13,31 @@
 }
 
 @font-face {
-   font-family: "ladi";
-   src: url('./resources/fonts/Ladi-Dense.woff') format('woff');
+   font-family: "ilyas";
+   src: url('./resources/fonts/Ilyas.woff') format('woff');
+}
+
+@font-face {
+   font-family: "thorny";
+   src: url('./resources/fonts/DFMThornyDoodleFont.woff') format('woff');
+}
+
+.made-bon {
+   font-family: var(--styled-font-family);
+}
+
+.studio {
+   font-family: var(--regular-font-family);
+}
+
+.ladi {
+   font-family: var(--cool-font-family);
 }
 
 :root {
    --regular-font-family: "studio-pro";
    --styled-font-family: "made-bonvoyage";
-   --cool-font-family: "ladi";
+   --cool-font-family: "ilyas";
    --offwhite-color: #FAF9F8FF;
    --softblack-color: #0e1111;
    --blue-color: hsla(234, 100%, 50%, 1);
@@ -139,24 +156,19 @@ a {
    top: 0;
    transition: filter 0.1s;
    z-index: 0;
-   margin-right: 0.5rem;
+   margin-right: 0.8rem;
 }
 
 .logo {
-   font-family: var(--styled-font-family);
+   font-family: var(--cool-font-family);
    font-style: italic;
-   color: var(--blue-color);
-   font-size: 4.9rem;
+   font-size: 5.8rem;
    transition: filter 0.1s;
+   color: var(--blue-color)
 }
 
 .logo.dark {
    color: var(--offwhite-color);
-}
-
-.grid-container {
-   position: relative;
-   z-index: 1;
 }
 
 /*============================================*/
@@ -165,21 +177,38 @@ a {
 
 .grid-container {
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr 10%;
    place-items: center;
-   margin-left: 0.8rem;
-   margin-right: 0.8rem;
+   margin-left: 0.2rem;
+   margin-right: 1rem;
+   margin-top: 3.4rem;
+   position: relative;
+   z-index: 1;
+}
+
+.grid-container-second {
+   display: grid;
+   grid-template-columns: 20% 1fr;
+   place-items: center;
+   margin-left: 1rem;
+   margin-right: 1rem;
+   margin-top: 1.2rem;
+   margin-bottom: 4.5rem;
+   text-align: right;
+   position: relative;
+   z-index: 1;
 }
 
 .grid-item {
    display: flex;
-   max-height: 300px;
+   max-height: 400px;
    max-width: 300px;
    margin-bottom: 2rem;
 }
 
 .grid-text {
-   font-size: 1.2rem;
+   font-size: 1.4rem;
+   font-family: var(--regular-font-family);
    color: var(--softblack-color);
 }
 
@@ -188,8 +217,13 @@ a {
    color: var(--offwhite-color);
 }
 
+.pop {
+   font-family: var(--styled-font-family);
+   font-style: italic;
+}
+
 /*============================================*/
-         /*===== GRID SECTION =====*/
+         /*===== LINKS SECTION =====*/
 /*============================================*/
 
 .hero-links-container {
@@ -199,7 +233,7 @@ a {
    align-items: center;
    gap: 1rem;
    margin-top: 2rem;
-   margin-bottom: 4rem;
+   margin-bottom: 7rem;
 }
 
 .hero-link {
@@ -241,6 +275,10 @@ a {
    margin-right: 0.5rem;
    margin-bottom: 0.5rem;
    margin-top: 0.5rem;
+}
+
+.time-text {
+   font-family: var(--regular-font-family);
 }
 
 .time-text.dark {
@@ -285,7 +323,7 @@ a {
 
 @media screen and (min-width: 700px) {
    .logo {
-      font-size: 19rem;
+      font-size: 22rem;
       margin-top: 0;
    }
 
@@ -295,6 +333,19 @@ a {
 
    .star-footer {
       margin-left: 1rem;
+   }
+
+   .grid-text {
+      font-size: 3rem;
+   }
+
+   .grid-item {
+      max-width: 90%;
+   }
+
+   .hero-link {
+      font-size: 9rem;
+      border-radius: 40rem;
    }
 
 }
