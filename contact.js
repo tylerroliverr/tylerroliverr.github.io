@@ -37,34 +37,28 @@ const lightStar = document.querySelector('.star-light');
 const darkStar = document.querySelector('.star-dark');
 const footer = document.querySelector('.sticky-footer');
 const logo = document.querySelector('.logo');
-const gridText = document.querySelectorAll('.grid-text');
 const timeText = document.querySelector('.time-text');
-const heroLink = document.querySelectorAll('.hero-link');
 const formContainer = document.querySelector('.form');
 const inputField = document.querySelectorAll('.input');
 const submitButton = document.querySelector('.submit');
 const labelText = document.querySelectorAll('.label');
 const body = document.querySelector('.body');
+const backHome = document.querySelector('.back-link');
 
 const handleDarkColorChange = () => {
    body.className = 'body dark';
    footer.className = 'sticky-footer dark';
    logo.className = 'logo dark';
    timeText.className = 'time-text dark';
-   // submitButton.className = 'submit dark';
-   // formContainer.className = 'form dark';
-   gridText.forEach((item) => {
-      item.className = 'grid-text dark';
+   submitButton.className = 'submit dark';
+   formContainer.className = 'form dark';
+   backHome.className = 'back-link dark';
+   inputField.forEach((item) => {
+      item.className = 'input dark';
    });
-   heroLink.forEach((item) => {
-      item.className = 'hero-link dark';
+   labelText.forEach((item) => {
+      item.className = 'label dark';
    });
-   // inputField.forEach((item) => {
-   //    item.className = 'input dark';
-   // });
-   // labelText.forEach((item) => {
-   //    item.className = 'label dark';
-   // });
    lightStar.style.display = 'none';
    darkStar.style.display = 'block';
 };
@@ -74,20 +68,15 @@ const handleLightColorChange = () => {
    footer.className = 'sticky-footer';
    logo.className = 'logo';
    timeText.className = 'time-text';
-   // submitButton.className = 'submit';
-   // formContainer.className = 'form';
-   gridText.forEach((item) => {
-      item.className = 'grid-text';
+   submitButton.className = 'submit';
+   formContainer.className = 'form';
+   backHome.className = 'back-link';
+   inputField.forEach((item) => {
+      item.className = 'input';
    });
-   heroLink.forEach((item) => {
-      item.className = 'hero-link';
+   labelText.forEach((item) => {
+      item.className = 'label';
    });
-   // inputField.forEach((item) => {
-   //    item.className = 'input';
-   // });
-   // labelText.forEach((item) => {
-   //    item.className = 'label';
-   // });
    lightStar.style.display = 'block';
    darkStar.style.display = 'none';
 };
