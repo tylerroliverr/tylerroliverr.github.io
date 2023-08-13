@@ -119,6 +119,42 @@ a {
    100% { transform: scale(0.5) rotate(360deg); }
 }
 
+.reveal {
+   transform: translateX(350px);
+   opacity: 0;
+   transition: 1s all ease;
+   overflow: hidden;
+ }
+
+ .reveal-right {
+   transform: translateX(-350px);
+   opacity: 0;
+   transition: 1s all ease;
+   overflow: hidden;
+ }
+
+ .reveal-right.active {
+   transform: translateX(0px);
+   opacity: 1;
+ }
+ 
+ .reveal.active {
+   transform: translateX(0);
+   opacity: 1;
+ }
+
+ .reveal-bottom {
+   transform: translateY(350px);
+   opacity: 0;
+   transition: 1.2s all ease;
+   overflow: hidden;
+ }
+
+ .reveal-bottom.active {
+   transform: translateY(0px);
+   opacity: 1;
+ }
+
 /*============================================*/
       /*===== HERO STAR =====*/
 /*============================================*/
@@ -615,6 +651,8 @@ a {
    .hero-link {
       font-size: 12rem;
       border-radius: 40rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
    }
 
    .projects-container {
@@ -655,6 +693,10 @@ a {
       padding-right: 10px;
       border: 1px solid var(--softblack-color);
       color: var(--softblack-color);
+   }
+
+   .contact {
+      margin-top: 6rem;
    }
 
    button:hover {

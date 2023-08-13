@@ -197,3 +197,49 @@ var wordflick = function () {
 $(document).ready(function () {
  wordflick();
 });
+
+// REVEALS
+function reveal() {
+   var revealLeft = document.querySelectorAll(".reveal");
+   var revealRight = document.querySelectorAll(".reveal-right");
+   var revealBottom = document.querySelectorAll(".reveal-bottom");
+ 
+   for (var i = 0; i < revealLeft.length; i++) {
+     var windowHeight = window.innerHeight;
+     var elementTop = revealLeft[i].getBoundingClientRect().top;
+     var elementVisible = 200;
+ 
+     if (elementTop < windowHeight - elementVisible) {
+       revealLeft[i].classList.add("active");
+     } else {
+       revealLeft[i].classList.remove("active");
+     }
+   }
+
+   for (var i = 0; i < revealRight.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = revealRight[i].getBoundingClientRect().top;
+      var elementVisible = 350;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        revealRight[i].classList.add("active");
+      } else {
+        revealRight[i].classList.remove("active");
+      }
+    }
+
+    for (var i = 0; i < revealBottom.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = revealBottom[i].getBoundingClientRect().top;
+      var elementVisible = 350;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        revealBottom[i].classList.add("active");
+      } else {
+        revealBottom[i].classList.remove("active");
+      }
+    }
+ }
+ 
+ window.addEventListener("scroll", reveal);
+ 
