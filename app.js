@@ -45,6 +45,12 @@ const inputField = document.querySelectorAll('.input');
 const submitButton = document.querySelector('.submit');
 const labelText = document.querySelectorAll('.label');
 const body = document.querySelector('.body');
+const pop = document.querySelectorAll('.pop');
+const projTitle = document.querySelectorAll('.project-title');
+const projDesc = document.querySelectorAll('.project-desc');
+const projDescMob = document.querySelectorAll('.project-desc-mobile');
+const wordText = document.querySelectorAll('.word');
+const projImg = document.querySelectorAll('.project-img');
 
 const handleDarkColorChange = () => {
    body.className = 'body dark';
@@ -58,6 +64,24 @@ const handleDarkColorChange = () => {
    });
    heroLink.forEach((item) => {
       item.className = 'hero-link dark';
+   });
+   pop.forEach((item) => {
+      item.className = 'pop dark';
+   });
+   projTitle.forEach((item) => {
+      item.className = 'project-title dark';
+   });
+   projDesc.forEach((item) => {
+      item.className = 'project-desc dark';
+   });
+   projDescMob.forEach((item) => {
+      item.className = 'project-desc-mobile dark';
+   });
+   wordText.forEach((item) => {
+      item.className = 'word dark';
+   });
+   projImg.forEach((item) => {
+      item.className = 'project-img dark';
    });
    // inputField.forEach((item) => {
    //    item.className = 'input dark';
@@ -82,6 +106,24 @@ const handleLightColorChange = () => {
    heroLink.forEach((item) => {
       item.className = 'hero-link';
    });
+   pop.forEach((item) => {
+      item.className = 'pop';
+   });
+   projTitle.forEach((item) => {
+      item.className = 'project-title';
+   });
+   projDesc.forEach((item) => {
+      item.className = 'project-desc';
+   });
+   projDescMob.forEach((item) => {
+      item.className = 'project-desc-mobile';
+   });
+   wordText.forEach((item) => {
+      item.className = 'word';
+   });
+   projImg.forEach((item) => {
+      item.className = 'project-img';
+   });
    // inputField.forEach((item) => {
    //    item.className = 'input';
    // });
@@ -102,3 +144,56 @@ function refreshTime() {
    timeText.textContent = datetime;
 }
 setInterval(refreshTime, 1000);
+
+// CONTACT TYPING TEXT
+var words = [
+   `Let's get started!`,
+   `I'd love to work with you!`,
+   `Shoot me an email below...`,
+   `:)  :)  :)`,
+   `<3  <3  <3`,
+   `typing... typing... jks lol`
+ ],
+ part,
+ i = 0,
+ offset = 0,
+ len = words.length,
+ forwards = true,
+ skip_count = 0,
+ skip_delay = 15,
+ speed = 70;
+var wordflick = function () {
+ setInterval(function () {
+   if (forwards) {
+     if (offset >= words[i].length) {
+       ++skip_count;
+       if (skip_count == skip_delay) {
+         forwards = false;
+         skip_count = 0;
+       }
+     }
+   } else {
+     if (offset == 0) {
+       forwards = true;
+       i++;
+       offset = 0;
+       if (i >= len) {
+         i = 0;
+       }
+     }
+   }
+   part = words[i].substr(0, offset);
+   if (skip_count == 0) {
+     if (forwards) {
+       offset++;
+     } else {
+       offset--;
+     }
+   }
+   $(".word").text(part);
+ }, speed);
+};
+
+$(document).ready(function () {
+ wordflick();
+});
