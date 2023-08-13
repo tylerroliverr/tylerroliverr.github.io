@@ -207,7 +207,7 @@ function reveal() {
    for (var i = 0; i < revealLeft.length; i++) {
      var windowHeight = window.innerHeight;
      var elementTop = revealLeft[i].getBoundingClientRect().top;
-     var elementVisible = 200;
+     var elementVisible = 150;
  
      if (elementTop < windowHeight - elementVisible) {
        revealLeft[i].classList.add("active");
@@ -219,7 +219,7 @@ function reveal() {
    for (var i = 0; i < revealRight.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = revealRight[i].getBoundingClientRect().top;
-      var elementVisible = 350;
+      var elementVisible = 150;
   
       if (elementTop < windowHeight - elementVisible) {
         revealRight[i].classList.add("active");
@@ -231,7 +231,7 @@ function reveal() {
     for (var i = 0; i < revealBottom.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = revealBottom[i].getBoundingClientRect().top;
-      var elementVisible = 350;
+      var elementVisible = 150;
   
       if (elementTop < windowHeight - elementVisible) {
         revealBottom[i].classList.add("active");
