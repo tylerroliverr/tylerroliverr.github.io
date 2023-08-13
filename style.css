@@ -366,6 +366,7 @@ a {
 
 .word {
    max-width: 90vw;
+   height: 10vh;
    text-align: center;
    color: var(--blue-color);
    font: 2rem var(--regular-font-family);
@@ -376,7 +377,7 @@ a {
 }
 
 .contact {
-   margin-top: 4rem;
+   margin-top: 2rem;
 }
 
 .help-text {
