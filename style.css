@@ -629,6 +629,16 @@ a {
       /*===== DESKTOP QUERIES =====*/
 /*============================================*/
 
+@media screen and (min-width: 900px){
+   .grid-text {
+      font-size: 5rem;
+   }
+
+   .grid-text.dark {
+      font-size: 5rem;
+   }
+}
+
 @media screen and (min-width: 700px) {
    .header {
       max-width: 98vw;
@@ -656,11 +666,11 @@ a {
    }
 
    .grid-text {
-      font-size: 5rem;
+      font-size: 3.6rem;
    }
 
    .grid-text.dark {
-      font-size: 5rem;
+      font-size: 3.6rem;
    }
 
    .grid-item {
@@ -668,7 +678,7 @@ a {
    }
 
    .word {
-      font-size: 10rem;
+      font-size: 6rem;
    }
 
    .hero-link {
