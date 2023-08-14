@@ -128,8 +128,8 @@ setInterval(refreshTime, 1000);
 // CONTACT TYPING TEXT
 var words = [
    `Let's get started!`,
-   `I'd love to work with you!`,
-   `shoot me an email below...`,
+   `Have an idea?`,
+   `Why don't you:`,
    `:)  :)  :)`,
    `<3  <3  <3`,
    `typing... typing... jks lol`
@@ -203,4 +203,3 @@ function revealElements(elements, offset) {
    revealElements(revealRight, 0);
    revealElements(revealBottom, 0);
  });
- 
