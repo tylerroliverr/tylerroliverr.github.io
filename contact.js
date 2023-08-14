@@ -20,18 +20,6 @@ function swappingPages() {
    timer = setTimeout(showPage, 1400);
 }
 
-window.addEventListener("scroll", function () {
-   const logo = document.querySelector('.logo');
-   const scrollValue = window.scrollY;
-
-   // Calculate the blur amount based on the scroll position
-   const maxBlur = 3000; // Maximum blur amount in pixels
-   const blurAmount = Math.min(scrollValue / 50, maxBlur); // Adjust divisor for sensitivity
-
-   // Apply the blur effect
-   logo.style.filter = `blur(${blurAmount}px)`;
-});
-
 //LIGHT AND DARK THEME
 const lightStar = document.querySelector('.star-light');
 const darkStar = document.querySelector('.star-dark');
@@ -44,6 +32,9 @@ const submitButton = document.querySelector('.submit');
 const labelText = document.querySelectorAll('.label');
 const body = document.querySelector('.body');
 const backHome = document.querySelector('.back-link');
+const fieldSet = document.querySelectorAll('.fieldset');
+const inputName = document.getElementById('name');
+const inputEmail = document.getElementById('email');
 
 const handleDarkColorChange = () => {
    body.className = 'body dark';
@@ -53,11 +44,16 @@ const handleDarkColorChange = () => {
    submitButton.className = 'submit dark';
    formContainer.className = 'form dark';
    backHome.className = 'back-link dark';
+   inputEmail.classList.add('dark');
+   inputName.classList.add('dark');
    inputField.forEach((item) => {
       item.className = 'input dark';
    });
    labelText.forEach((item) => {
       item.className = 'label dark';
+   });
+   fieldSet.forEach((item) => {
+      item.className = 'fieldset dark';
    });
    lightStar.style.display = 'none';
    darkStar.style.display = 'block';
@@ -71,11 +67,16 @@ const handleLightColorChange = () => {
    submitButton.className = 'submit';
    formContainer.className = 'form';
    backHome.className = 'back-link';
+   inputEmail.classList.remove('dark');
+   inputName.classList.remove('dark');
    inputField.forEach((item) => {
       item.className = 'input';
    });
    labelText.forEach((item) => {
       item.className = 'label';
+   });
+   fieldSet.forEach((item) => {
+      item.className = 'fieldset';
    });
    lightStar.style.display = 'block';
    darkStar.style.display = 'none';

@@ -40,10 +40,6 @@ const logo = document.querySelector('.logo');
 const gridText = document.querySelectorAll('.grid-text');
 const timeText = document.querySelector('.time-text');
 const heroLink = document.querySelectorAll('.hero-link');
-const formContainer = document.querySelector('.form');
-const inputField = document.querySelectorAll('.input');
-const submitButton = document.querySelector('.submit');
-const labelText = document.querySelectorAll('.label');
 const body = document.querySelector('.body');
 const pop = document.querySelectorAll('.pop');
 const projTitle = document.querySelectorAll('.project-title');
@@ -57,8 +53,6 @@ const handleDarkColorChange = () => {
    footer.className = 'sticky-footer dark';
    logo.className = 'logo dark';
    timeText.className = 'time-text dark';
-   // submitButton.className = 'submit dark';
-   // formContainer.className = 'form dark';
    gridText.forEach((item) => {
       item.className = 'grid-text dark';
    });
@@ -83,12 +77,6 @@ const handleDarkColorChange = () => {
    projImg.forEach((item) => {
       item.className = 'project-img dark';
    });
-   // inputField.forEach((item) => {
-   //    item.className = 'input dark';
-   // });
-   // labelText.forEach((item) => {
-   //    item.className = 'label dark';
-   // });
    lightStar.style.display = 'none';
    darkStar.style.display = 'block';
 };
@@ -98,8 +86,6 @@ const handleLightColorChange = () => {
    footer.className = 'sticky-footer';
    logo.className = 'logo';
    timeText.className = 'time-text';
-   // submitButton.className = 'submit';
-   // formContainer.className = 'form';
    gridText.forEach((item) => {
       item.className = 'grid-text';
    });
@@ -124,12 +110,6 @@ const handleLightColorChange = () => {
    projImg.forEach((item) => {
       item.className = 'project-img';
    });
-   // inputField.forEach((item) => {
-   //    item.className = 'input';
-   // });
-   // labelText.forEach((item) => {
-   //    item.className = 'label';
-   // });
    lightStar.style.display = 'block';
    darkStar.style.display = 'none';
 };
@@ -199,47 +179,28 @@ $(document).ready(function () {
 });
 
 // REVEALS
-function reveal() {
+function revealElements(elements, offset) {
+   var windowHeight = window.innerHeight;
+ 
+   for (var i = 0; i < elements.length; i++) {
+     var elementTop = elements[i].getBoundingClientRect().top;
+     var elementVisible = 0;
+ 
+     if (elementTop < windowHeight - elementVisible + offset) {
+       elements[i].classList.add("active");
+     } else {
+       elements[i].classList.remove("active");
+     }
+   }
+ }
+ 
+ window.addEventListener("scroll", function () {
    var revealLeft = document.querySelectorAll(".reveal");
    var revealRight = document.querySelectorAll(".reveal-right");
    var revealBottom = document.querySelectorAll(".reveal-bottom");
  
-   for (var i = 0; i < revealLeft.length; i++) {
-     var windowHeight = window.innerHeight;
-     var elementTop = revealLeft[i].getBoundingClientRect().top;
-     var elementVisible = 150;
- 
-     if (elementTop < windowHeight - elementVisible) {
-       revealLeft[i].classList.add("active");
-     } else {
-       revealLeft[i].classList.remove("active");
-     }
-   }
-
-   for (var i = 0; i < revealRight.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = revealRight[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        revealRight[i].classList.add("active");
-      } else {
-        revealRight[i].classList.remove("active");
-      }
-    }
-
-    for (var i = 0; i < revealBottom.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = revealBottom[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        revealBottom[i].classList.add("active");
-      } else {
-        revealBottom[i].classList.remove("active");
-      }
-    }
- }
- 
- window.addEventListener("scroll", reveal);
+   revealElements(revealLeft, 0);
+   revealElements(revealRight, 0);
+   revealElements(revealBottom, 0);
+ });
  
