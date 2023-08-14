@@ -129,7 +129,7 @@ setInterval(refreshTime, 1000);
 var words = [
    `Let's get started!`,
    `I'd love to work with you!`,
-   `Shoot me an email below...`,
+   `shoot me an email below...`,
    `:)  :)  :)`,
    `<3  <3  <3`,
    `typing... typing... jks lol`
