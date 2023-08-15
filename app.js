@@ -20,16 +20,15 @@ function swappingPages() {
    timer = setTimeout(showPage, 1400);
 }
 
-window.addEventListener("scroll", function () {
-   const logo = document.querySelector('.logo');
-   const scrollValue = window.scrollY;
+const logoElement = document.querySelector('.logo');
+const initialBlurValue = 1; // Initial blur value from your CSS
+const maxBlur = 10; // Maximum blur value you want to achieve
 
-   // Calculate the blur amount based on the scroll position
-   const maxBlur = 3000; // Maximum blur amount in pixels
-   const blurAmount = Math.min(scrollValue / 50, maxBlur); // Adjust divisor for sensitivity
+window.addEventListener('scroll', () => {
+  const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight));
+  const blurValue = initialBlurValue + (scrollPercentage * (maxBlur - initialBlurValue));
 
-   // Apply the blur effect
-   logo.style.filter = `blur(${blurAmount}px)`;
+  logoElement.style.filter = `blur(${blurValue}vw)`;
 });
 
 //LIGHT AND DARK THEME
@@ -47,6 +46,7 @@ const projDesc = document.querySelectorAll('.project-desc');
 const projDescMob = document.querySelectorAll('.project-desc-mobile');
 const wordText = document.querySelectorAll('.word');
 const projImg = document.querySelectorAll('.project-img');
+const projLink = document.querySelectorAll('.proj-link');
 
 const handleDarkColorChange = () => {
    body.className = 'body dark';
@@ -76,6 +76,9 @@ const handleDarkColorChange = () => {
    });
    projImg.forEach((item) => {
       item.className = 'project-img dark';
+   });
+   projLink.forEach((item) => {
+      item.className = 'proj-link dark';
    });
    lightStar.style.display = 'none';
    darkStar.style.display = 'block';
@@ -109,6 +112,9 @@ const handleLightColorChange = () => {
    });
    projImg.forEach((item) => {
       item.className = 'project-img';
+   });
+   projLink.forEach((item) => {
+      item.className = 'proj-link';
    });
    lightStar.style.display = 'block';
    darkStar.style.display = 'none';
