@@ -21,7 +21,7 @@ function swappingPages() {
 }
 
 const logoElement = document.querySelector('.logo');
-const initialBlurValue = 1; // Initial blur value from your CSS
+const initialBlurValue = 0.6; // Initial blur value from your CSS
 const maxBlur = 10; // Maximum blur value you want to achieve
 
 window.addEventListener('scroll', () => {
