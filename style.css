@@ -491,7 +491,7 @@ a {
 .time-text {
    font-family: var(--regular-font-family);
    color: var(--blue-color);
-   font-size: 1.2rem;
+   font-size: 1rem;
 }
 
 .time-text.dark {
@@ -506,7 +506,7 @@ a {
 }
 
 .star-light {
-   width: 20px;
+   width: 18px;
    cursor: pointer;
    -webkit-animation: rotate 20s linear infinite;
    animation: rotate 20s linear infinite;
@@ -514,7 +514,7 @@ a {
 
 .star-dark {
    display: none;
-   width: 20px;
+   width: 18px;
    cursor: pointer;
    animation: rotate 20s linear infinite;
 }
@@ -773,6 +773,18 @@ a {
 
    .help-text {
       font-size: 2rem;
+   }
+
+   .time-text {
+      font-size: 1.4rem;
+   }
+
+   .star-light {
+      width: 20px;
+   }
+
+   .star-dark {
+      width: 20px;
    }
 }
 

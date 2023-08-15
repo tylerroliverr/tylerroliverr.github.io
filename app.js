@@ -138,7 +138,7 @@ var words = [
    `Why don't you:`,
    `:)  :)  :)`,
    `<3  <3  <3`,
-   `typing... typing... jks lol`
+   `typing... typing...`
  ],
  part,
  i = 0,
