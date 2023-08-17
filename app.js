@@ -126,13 +126,13 @@ darkStar.addEventListener('click', handleLightColorChange);
 //REAL-TIME
 `use strict`;
 function refreshTime() {
-   var datetime = new Date().toLocaleTimeString("en-au", { hour12: false });
+   let datetime = new Date().toLocaleTimeString("en-au", { hour12: false });
    timeText.textContent = datetime;
 }
 setInterval(refreshTime, 1000);
 
 // CONTACT TYPING TEXT
-var words = [
+let words = [
    `Let's get started!`,
    `Have an idea?`,
    `Why don't you:`,
@@ -148,7 +148,7 @@ var words = [
  skip_count = 0,
  skip_delay = 15,
  speed = 70;
-var wordflick = function () {
+let wordflick = function () {
  setInterval(function () {
    if (forwards) {
      if (offset >= words[i].length) {
@@ -186,11 +186,11 @@ $(document).ready(function () {
 
 // REVEALS
 function revealElements(elements, offset) {
-   var windowHeight = window.innerHeight;
+   let windowHeight = window.innerHeight;
  
-   for (var i = 0; i < elements.length; i++) {
-     var elementTop = elements[i].getBoundingClientRect().top;
-     var elementVisible = 0;
+   for (let i = 0; i < elements.length; i++) {
+     let elementTop = elements[i].getBoundingClientRect().top;
+     let elementVisible = 0;
  
      if (elementTop < windowHeight - elementVisible + offset) {
        elements[i].classList.add("active");
@@ -201,9 +201,9 @@ function revealElements(elements, offset) {
  }
  
  window.addEventListener("scroll", function () {
-   var revealLeft = document.querySelectorAll(".reveal");
-   var revealRight = document.querySelectorAll(".reveal-right");
-   var revealBottom = document.querySelectorAll(".reveal-bottom");
+   const revealLeft = document.querySelectorAll(".reveal");
+   const revealRight = document.querySelectorAll(".reveal-right");
+   const revealBottom = document.querySelectorAll(".reveal-bottom");
  
    revealElements(revealLeft, 0);
    revealElements(revealRight, 0);

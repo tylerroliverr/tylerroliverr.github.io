@@ -35,6 +35,9 @@ const backHome = document.querySelector('.back-link');
 const fieldSet = document.querySelectorAll('.fieldset');
 const inputName = document.getElementById('name');
 const inputEmail = document.getElementById('email');
+const selectBudget = document.getElementById('budget');
+const selectService = document.getElementById('service');
+const textArea = document.querySelector('.text-area');
 
 const handleDarkColorChange = () => {
    body.className = 'body dark';
@@ -44,8 +47,11 @@ const handleDarkColorChange = () => {
    submitButton.className = 'submit dark';
    formContainer.className = 'form dark';
    backHome.className = 'back-link dark';
+   textArea.className = 'text-area dark';
    inputEmail.classList.add('dark');
    inputName.classList.add('dark');
+   selectBudget.classList.add('dark');
+   selectService.classList.add('dark');
    inputField.forEach((item) => {
       item.className = 'input dark';
    });
@@ -67,8 +73,11 @@ const handleLightColorChange = () => {
    submitButton.className = 'submit';
    formContainer.className = 'form';
    backHome.className = 'back-link';
+   textArea.className = 'text-area';
    inputEmail.classList.remove('dark');
    inputName.classList.remove('dark');
+   selectBudget.classList.remove('dark');
+   selectService.classList.remove('dark');
    inputField.forEach((item) => {
       item.className = 'input';
    });
