@@ -46,7 +46,6 @@ const handleDarkColorChange = () => {
    timeText.className = 'time-text dark';
    submitButton.className = 'submit dark';
    formContainer.className = 'form dark';
-   backHome.className = 'back-link dark';
    textArea.className = 'text-area dark';
    inputEmail.classList.add('dark');
    inputName.classList.add('dark');
@@ -72,7 +71,6 @@ const handleLightColorChange = () => {
    timeText.className = 'time-text';
    submitButton.className = 'submit';
    formContainer.className = 'form';
-   backHome.className = 'back-link';
    textArea.className = 'text-area';
    inputEmail.classList.remove('dark');
    inputName.classList.remove('dark');
