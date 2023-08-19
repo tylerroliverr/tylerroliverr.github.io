@@ -180,21 +180,19 @@ a {
    display: flex;
    align-items: center;
    max-width: 50vw;
-   -webkit-animation: scale 12s linear infinite;
-   animation: scale 12s linear infinite;
+   -webkit-animation: scale-2 14s linear infinite;
+   animation: scale-2 14s linear infinite;
    opacity: 0.9;
    pointer-events: none;
 }
 
-@-webkit-keyframes scale {
+@-webkit-keyframes scale-2 {
    0% { -webkit-transform: scale(0.6) rotate(0deg);}
-   65% { -webkit-transform: scale(0.8) rotate(-180deg); }
    100% { -webkit-transform: scale(0.6) rotate(-360deg); }
 }
 
-@keyframes scale {
+@keyframes scale-2 {
    0% { transform: scale(0.6) rotate(0deg);}
-   65% { transform: scale(0.8) rotate(-180deg); }
    100% { transform: scale(0.6) rotate(-360deg); }
 }
 
@@ -286,21 +284,22 @@ a {
    font-size: 1.4rem;
    font-family: var(--styled-font-family);
    color: var(--blue-color);
+   font-style: italic;
 }
 
 .grid-text.dark {
    color: var(--offwhite-color);
 }
 
-/* .pop {
-   font-family: var(--styled-font-family);
-   font-style: italic;
+.pop {
+   font-family: var(--regular-font-family);
    color: var(--blue-color);
+   font-style: normal;
 }
 
 .pop.dark {
    color: var(--offwhite-color);
-} */
+}
 
 /*============================================*/
          /*===== PROJECTS SECTION =====*/
