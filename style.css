@@ -285,6 +285,7 @@ a {
    font-family: var(--styled-font-family);
    color: var(--blue-color);
    font-style: italic;
+
 }
 
 .grid-text.dark {
@@ -294,11 +295,14 @@ a {
 .pop {
    font-family: var(--regular-font-family);
    color: var(--blue-color);
-   font-style: normal;
 }
 
 .pop.dark {
    color: var(--offwhite-color);
+}
+
+.pop-end {
+   font-size: 1rem;
 }
 
 /*============================================*/
