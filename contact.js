@@ -23,6 +23,7 @@ function swappingPages() {
 //LIGHT AND DARK THEME
 const lightStar = document.querySelector('.star-light');
 const darkStar = document.querySelector('.star-dark');
+const redStar = document.querySelector('.star-red');
 const footer = document.querySelector('.sticky-footer');
 const logo = document.querySelector('.logo');
 const timeText = document.querySelector('.time-text');
@@ -60,8 +61,29 @@ const handleDarkColorChange = () => {
    fieldSet.forEach((item) => {
       item.className = 'fieldset dark';
    });
-   lightStar.style.display = 'none';
-   darkStar.style.display = 'block';
+};
+
+const handleRedColorChange = () => {
+   body.className = 'body red';
+   footer.className = 'sticky-footer red';
+   logo.className = 'logo red';
+   timeText.className = 'time-text red';
+   submitButton.className = 'submit red';
+   formContainer.className = 'form red';
+   textArea.className = 'text-area red';
+   inputEmail.classList.add('red');
+   inputName.classList.add('red');
+   selectBudget.classList.add('red');
+   selectService.classList.add('red');
+   inputField.forEach((item) => {
+      item.className = 'input red';
+   });
+   labelText.forEach((item) => {
+      item.className = 'label red';
+   });
+   fieldSet.forEach((item) => {
+      item.className = 'fieldset red';
+   });
 };
 
 const handleLightColorChange = () => {
@@ -85,12 +107,12 @@ const handleLightColorChange = () => {
    fieldSet.forEach((item) => {
       item.className = 'fieldset';
    });
-   lightStar.style.display = 'block';
-   darkStar.style.display = 'none';
 };
 
 lightStar.addEventListener('click', handleDarkColorChange);
 darkStar.addEventListener('click', handleLightColorChange);
+redStar.addEventListener('click', handleRedColorChange);
+
 
 //REAL-TIME
 `use strict`;

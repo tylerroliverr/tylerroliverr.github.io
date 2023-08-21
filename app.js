@@ -34,6 +34,7 @@ window.addEventListener('scroll', () => {
 //LIGHT AND DARK THEME
 const lightStar = document.querySelector('.star-light');
 const darkStar = document.querySelector('.star-dark');
+const redStar = document.querySelector('.star-red');
 const footer = document.querySelector('.sticky-footer');
 const logo = document.querySelector('.logo');
 const gridText = document.querySelectorAll('.grid-text');
@@ -80,8 +81,40 @@ const handleDarkColorChange = () => {
    projLink.forEach((item) => {
       item.className = 'proj-link dark';
    });
-   lightStar.style.display = 'none';
-   darkStar.style.display = 'block';
+};
+
+const handleRedColorChange = () => {
+   body.className = 'body red';
+   footer.className = 'sticky-footer red';
+   logo.className = 'logo red';
+   timeText.className = 'time-text red';
+   gridText.forEach((item) => {
+      item.className = 'grid-text red';
+   });
+   heroLink.forEach((item) => {
+      item.className = 'hero-link red';
+   });
+   pop.forEach((item) => {
+      item.className = 'pop red';
+   });
+   projTitle.forEach((item) => {
+      item.className = 'project-title red';
+   });
+   projDesc.forEach((item) => {
+      item.className = 'project-desc red';
+   });
+   projDescMob.forEach((item) => {
+      item.className = 'project-desc-mobile red';
+   });
+   wordText.forEach((item) => {
+      item.className = 'word red';
+   });
+   projImg.forEach((item) => {
+      item.className = 'project-img red';
+   });
+   projLink.forEach((item) => {
+      item.className = 'proj-link red';
+   });
 };
 
 const handleLightColorChange = () => {
@@ -116,12 +149,11 @@ const handleLightColorChange = () => {
    projLink.forEach((item) => {
       item.className = 'proj-link';
    });
-   lightStar.style.display = 'block';
-   darkStar.style.display = 'none';
 };
 
 lightStar.addEventListener('click', handleDarkColorChange);
 darkStar.addEventListener('click', handleLightColorChange);
+redStar.addEventListener('click', handleRedColorChange);
 
 //REAL-TIME
 `use strict`;
