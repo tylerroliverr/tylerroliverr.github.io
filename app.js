@@ -48,12 +48,14 @@ const projDescMob = document.querySelectorAll('.project-desc-mobile');
 const wordText = document.querySelectorAll('.word');
 const projImg = document.querySelectorAll('.project-img');
 const projLink = document.querySelectorAll('.proj-link');
+const helpText = document.querySelector('.help-text');
 
 const handleDarkColorChange = () => {
    body.className = 'body dark';
    footer.className = 'sticky-footer dark';
    logo.className = 'logo dark';
    timeText.className = 'time-text dark';
+   helpText.className = 'help-text dark';
    gridText.forEach((item) => {
       item.className = 'grid-text dark';
    });
@@ -88,6 +90,7 @@ const handleRedColorChange = () => {
    footer.className = 'sticky-footer red';
    logo.className = 'logo red';
    timeText.className = 'time-text red';
+   helpText.className = 'help-text red';
    gridText.forEach((item) => {
       item.className = 'grid-text red';
    });
@@ -122,6 +125,7 @@ const handleLightColorChange = () => {
    footer.className = 'sticky-footer';
    logo.className = 'logo';
    timeText.className = 'time-text';
+   helpText.className = 'help-text';
    gridText.forEach((item) => {
       item.className = 'grid-text';
    });

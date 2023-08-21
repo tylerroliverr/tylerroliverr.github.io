@@ -513,17 +513,27 @@ a {
 
 .help-text {
    margin-top: auto;
-   font-family: var(--regular-font-family);
+   font-family: var(--styled-font-family);
    font-size: 0.5rem;
-   text-decoration: line-through;
    font-style: italic;
+   text-align: center;
+   color: var(--blue-color);
+   font-size: 10px;
+}
+
+.help-text.dark {
+   color: var(--offwhite-color);
+}
+
+.help-text.red {
+   color: var(--softblack-color);
 }
 
 .end {
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-bottom: 0.4rem;
+   margin: 0.6rem;
 }
 
 /*============================================*/
@@ -936,6 +946,10 @@ option {
       max-width: 92vw;
    }
 
+   .pop-end {
+      font-size: 2rem;
+   }
+
    .word {
       font-size: 6rem;
    }
@@ -1045,6 +1059,10 @@ option {
 
    .star-red {
       width: 20px;
+   }
+
+   .end {
+      margin: 6rem;
    }
 }
 
