@@ -587,9 +587,8 @@ a {
 }
 
 .star-wrapper {
-   margin-top: 0.6rem;
-   margin-bottom: 0.6rem;
-   margin-left: 0.6rem;
+   display: flex;
+   width: 100%;
 }
 
 .star-light {
@@ -597,7 +596,6 @@ a {
    cursor: pointer;
    -webkit-animation: rotate 20s linear infinite;
    animation: rotate 20s linear infinite;
-   margin-right: 14px;
 }
 
 .star-red {
@@ -605,7 +603,6 @@ a {
    cursor: pointer;
    -webkit-animation: rotate 22s linear infinite;
    animation: rotate 22s linear infinite;
-   margin-right: 14px;
 }
 
 .star-dark {
@@ -613,6 +610,14 @@ a {
    cursor: pointer;
    -webkit-animation: rotate 21s linear infinite;
    animation: rotate 21s linear infinite;
+}
+
+.star-img {
+   transition: all 0.5s;
+}
+
+.star-img:hover {
+   transform: scale(1.6);
 }
 
 @-webkit-keyframes rotate {
@@ -646,6 +651,10 @@ a {
 
 .back-link.red {
    color: var(--softblack-color);
+}
+
+.star-img {
+   margin: auto;
 }
 
 /*============================================*/
@@ -834,6 +843,20 @@ option {
    flex-direction: column;
    margin-bottom: 1.4rem;
    width: 70%;
+}
+
+.thanks-text {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.thanks-wrapper {
+   display: flex;
+   height: 90vh;
+   justify-content: center;
+   align-items: center;
 }
 
 /* .fieldset {

@@ -44,7 +44,7 @@ const handleDarkColorChange = () => {
    body.className = 'body dark';
    footer.className = 'sticky-footer dark';
    logo.className = 'logo dark';
-   timeText.className = 'time-text dark';
+   // timeText.className = 'time-text dark';
    submitButton.className = 'submit dark';
    formContainer.className = 'form dark';
    textArea.className = 'text-area dark';
@@ -67,7 +67,7 @@ const handleRedColorChange = () => {
    body.className = 'body red';
    footer.className = 'sticky-footer red';
    logo.className = 'logo red';
-   timeText.className = 'time-text red';
+   // timeText.className = 'time-text red';
    submitButton.className = 'submit red';
    formContainer.className = 'form red';
    textArea.className = 'text-area red';
@@ -90,7 +90,7 @@ const handleLightColorChange = () => {
    body.className = 'body';
    footer.className = 'sticky-footer';
    logo.className = 'logo';
-   timeText.className = 'time-text';
+   // timeText.className = 'time-text';
    submitButton.className = 'submit';
    formContainer.className = 'form';
    textArea.className = 'text-area';
@@ -115,9 +115,9 @@ redStar.addEventListener('click', handleRedColorChange);
 
 
 //REAL-TIME
-`use strict`;
-function refreshTime() {
-   var datetime = new Date().toLocaleTimeString("en-au", { hour12: false });
-   timeText.textContent = datetime;
-}
-setInterval(refreshTime, 1000);
+// `use strict`;
+// function refreshTime() {
+//    var datetime = new Date().toLocaleTimeString("en-au", { hour12: false });
+//    timeText.textContent = datetime;
+// }
+// setInterval(refreshTime, 1000);

@@ -54,7 +54,7 @@ const handleDarkColorChange = () => {
    body.className = 'body dark';
    footer.className = 'sticky-footer dark';
    logo.className = 'logo dark';
-   timeText.className = 'time-text dark';
+   // timeText.className = 'time-text dark';
    helpText.className = 'help-text dark';
    gridText.forEach((item) => {
       item.className = 'grid-text dark';
@@ -89,7 +89,7 @@ const handleRedColorChange = () => {
    body.className = 'body red';
    footer.className = 'sticky-footer red';
    logo.className = 'logo red';
-   timeText.className = 'time-text red';
+   // timeText.className = 'time-text red';
    helpText.className = 'help-text red';
    gridText.forEach((item) => {
       item.className = 'grid-text red';
@@ -124,7 +124,7 @@ const handleLightColorChange = () => {
    body.className = 'body';
    footer.className = 'sticky-footer';
    logo.className = 'logo';
-   timeText.className = 'time-text';
+   // timeText.className = 'time-text';
    helpText.className = 'help-text';
    gridText.forEach((item) => {
       item.className = 'grid-text';
@@ -160,12 +160,12 @@ darkStar.addEventListener('click', handleLightColorChange);
 redStar.addEventListener('click', handleRedColorChange);
 
 //REAL-TIME
-`use strict`;
-function refreshTime() {
-   let datetime = new Date().toLocaleTimeString("en-au", { hour12: false });
-   timeText.textContent = datetime;
-}
-setInterval(refreshTime, 1000);
+// `use strict`;
+// function refreshTime() {
+//    let datetime = new Date().toLocaleTimeString("en-au", { hour12: false });
+//    timeText.textContent = datetime;
+// }
+// setInterval(refreshTime, 1000);
 
 // CONTACT TYPING TEXT
 let words = [
