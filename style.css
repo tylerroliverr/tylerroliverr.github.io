@@ -219,7 +219,7 @@ a {
 /*============================================*/
 
 .header {
-   margin-top: 0.2rem;
+   padding-top: 0.2rem;
    display: flex;
    justify-content: center;
    position: sticky;
@@ -231,7 +231,7 @@ a {
 }
 
 .contact-header {
-   margin-top: 0.2rem;
+   padding-top: 0.2rem;
    display: flex;
    justify-content: center;
    transition: filter 0.1s;
@@ -241,10 +241,14 @@ a {
 .logo {
    font-family: var(--regular-font-family);
    font-style: italic;
-   font-size: 15vw;
+   font-size: 14.5vw;
    filter: blur(0.6vw);
    transition: filter 0.1s;
    color: var(--blue-color);
+}
+
+.header-wrapper {
+   margin: auto;
 }
 
 .logo.dark {
