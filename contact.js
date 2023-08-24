@@ -50,7 +50,7 @@ const handleDarkColorChange = () => {
    body.className = 'body dark';
    footer.className = 'sticky-footer dark';
    logo.className = 'logo dark';
-   // timeText.className = 'time-text dark';
+   timeText.className = 'time-text dark';
    submitButton.className = 'submit dark';
    formContainer.className = 'form dark';
    textArea.className = 'text-area dark';
