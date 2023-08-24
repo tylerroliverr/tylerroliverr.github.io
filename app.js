@@ -265,8 +265,9 @@ function revealElements(elements, offset) {
  
      if (elementTop < windowHeight - elementVisible + offset) {
        elements[i].classList.add("active");
-     } else {
-       elements[i].classList.remove("active");
+   //   } else {
+   //     elements[i].classList.remove("active");
+   //   }
      }
    }
  }

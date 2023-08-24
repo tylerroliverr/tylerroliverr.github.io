@@ -101,13 +101,17 @@ a {
 }
 
 @-webkit-keyframes animate-finish-load {
-   from { top:0px; opacity:1 } 
-   to { top:-1500px; opacity:0 }
+   /* from { top:0px; opacity:1 } 
+   to { top:-1500px; opacity:0 } */
+   0% { -webkit-transform: translate(0px); opacity: 0; }
+   100% { -webkit-transform: translate(-1500px); opacity: 1; }
 }
 
 @keyframes animate-finish-load { 
-   from { top:0px; opacity:1 } 
-   to { top:-1500px; opacity:0 }
+   /* from { top:0px; opacity:1 } 
+   to { top:-1500px; opacity:0 } */
+   0% { transform: translateY(0px); opacity: 0; }
+   100% { transform: translateY(-1500px); opacity: 1; }
 }
 
 .loading-star {
@@ -211,13 +215,17 @@ a {
 }
 
 @-webkit-keyframes animate-after-load {
-   from { bottom:-1500px; opacity:0 } 
-   to { bottom:0px; opacity:1 }
+   /* from { bottom:-1500px; opacity:0 } 
+   to { bottom:0px; opacity:1 } */
+   0% { -webkit-transform: translateY(1500px); opacity: 0; }
+   100% { -webkit-transform: translateY(0px); opacity: 1; }
 }
 
 @keyframes animate-after-load { 
-   from { bottom:-1500px; opacity:0 } 
-   to { bottom:0px; opacity:1 }
+   /* from { bottom:-1500px; opacity:0 } 
+   to { bottom:0px; opacity:1 } */
+   0% { transform: translateY(1500px); opacity: 0; }
+   100% { transform: translateY(0px); opacity: 1; }
 }
 
 #before-loading {
