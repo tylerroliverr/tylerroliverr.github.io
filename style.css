@@ -12,16 +12,6 @@
    src: url('./resources/fonts/studio-pro-regular-webfont.woff') format('woff');
 }
 
-@font-face {
-   font-family: "ilyas";
-   src: url('./resources/fonts/Ilyas.woff') format('woff');
-}
-
-@font-face {
-   font-family: "thorny";
-   src: url('./resources/fonts/Ladi-Dense.woff') format('woff');
-}
-
 .made-bon {
    font-family: var(--styled-font-family);
 }
@@ -30,20 +20,9 @@
    font-family: var(--regular-font-family);
 }
 
-.ladi {
-   font-family: var(--cool-font-family);
-}
-
-.thorny {
-   font-family: var(--thorny-font-family);
-}
-
 :root {
    --regular-font-family: "studio-pro";
    --styled-font-family: "made-bonvoyage";
-   --cool-font-family: "ilyas";
-   --thorny-font-family: "thorny";
-   --italic-font-family: "italic-font";
    --offwhite-color: #FAF9F8FF;
    --softblack-color: #0e1111;
    --blue-color: hsla(234, 100%, 50%, 1);
