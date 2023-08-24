@@ -8,8 +8,9 @@ function showPage() {
 
 function pageLoaded() {
    document.getElementById('loader').classList.add('loaded');
-   darkStar.classList.add('stop-spin');
-   darkStar.classList.add('dark-shadow');
+   // darkStar.classList.add('stop-spin');
+   // darkStar.classList.add('dark-shadow');
+   // randomColorFunction();
 }
 
 function loadingStar() {
@@ -53,14 +54,14 @@ const projLink = document.querySelectorAll('.proj-link');
 const helpText = document.querySelector('.help-text');
 
 const handleDarkColorChange = () => {
-   redStar.classList.remove('stop-spin');
-   redStar.classList.remove('red-shadow');
-   darkStar.classList.remove('stop-spin');
-   darkStar.classList.remove('dark-shadow');
+   // redStar.classList.remove('stop-spin');
+   // redStar.classList.remove('red-shadow');
+   // darkStar.classList.remove('stop-spin');
+   // darkStar.classList.remove('dark-shadow');
    body.className = 'body dark';
    footer.className = 'sticky-footer dark';
    logo.className = 'logo dark';
-   // timeText.className = 'time-text dark';
+   timeText.className = 'time-text dark';
    helpText.className = 'help-text dark';
    gridText.forEach((item) => {
       item.className = 'grid-text dark';
@@ -89,19 +90,19 @@ const handleDarkColorChange = () => {
    projLink.forEach((item) => {
       item.className = 'proj-link dark';
    });
-   lightStar.classList.add('stop-spin');
-   lightStar.classList.add('light-shadow');
+   // lightStar.classList.add('stop-spin');
+   // lightStar.classList.add('light-shadow');
 };
 
 const handleRedColorChange = () => {
-   darkStar.classList.remove('stop-spin');
-   darkStar.classList.remove('dark-shadow');
-   lightStar.classList.remove('stop-spin');
-   lightStar.classList.remove('light-shadow');
+   // darkStar.classList.remove('stop-spin');
+   // darkStar.classList.remove('dark-shadow');
+   // lightStar.classList.remove('stop-spin');
+   // lightStar.classList.remove('light-shadow');
    body.className = 'body red';
    footer.className = 'sticky-footer red';
    logo.className = 'logo red';
-   // timeText.className = 'time-text red';
+   timeText.className = 'time-text red';
    helpText.className = 'help-text red';
    gridText.forEach((item) => {
       item.className = 'grid-text red';
@@ -130,19 +131,19 @@ const handleRedColorChange = () => {
    projLink.forEach((item) => {
       item.className = 'proj-link red';
    });
-   redStar.classList.add('stop-spin');
-   redStar.classList.add('red-shadow');
+   // redStar.classList.add('stop-spin');
+   // redStar.classList.add('red-shadow');
 };
 
 const handleLightColorChange = () => {
-   redStar.classList.remove('stop-spin');
-   redStar.classList.remove('red-shadow');
-   lightStar.classList.remove('stop-spin');
-   lightStar.classList.remove('light-shadow');
+   // redStar.classList.remove('stop-spin');
+   // redStar.classList.remove('red-shadow');
+   // lightStar.classList.remove('stop-spin');
+   // lightStar.classList.remove('light-shadow');
    body.className = 'body';
    footer.className = 'sticky-footer';
    logo.className = 'logo';
-   // timeText.className = 'time-text';
+   timeText.className = 'time-text';
    helpText.className = 'help-text';
    gridText.forEach((item) => {
       item.className = 'grid-text';
@@ -171,21 +172,35 @@ const handleLightColorChange = () => {
    projLink.forEach((item) => {
       item.className = 'proj-link';
    });
-   darkStar.classList.add('stop-spin');
-   darkStar.classList.add('dark-shadow');
+   // darkStar.classList.add('stop-spin');
+   // darkStar.classList.add('dark-shadow');
 };
 
-lightStar.addEventListener('click', handleDarkColorChange);
-darkStar.addEventListener('click', handleLightColorChange);
-redStar.addEventListener('click', handleRedColorChange);
+// lightStar.addEventListener('click', handleDarkColorChange);
+// darkStar.addEventListener('click', handleLightColorChange);
+// redStar.addEventListener('click', handleRedColorChange);
 
-//REAL-TIME
-// `use strict`;
-// function refreshTime() {
-//    let datetime = new Date().toLocaleTimeString("en-au", { hour12: false });
-//    timeText.textContent = datetime;
-// }
-// setInterval(refreshTime, 1000);
+const colorFunctions = [
+   handleDarkColorChange,
+   handleLightColorChange,
+   handleRedColorChange
+ ];
+ 
+ function getRandomIndex(max) {
+   return Math.floor(Math.random() * max);
+ }
+ 
+ const randomIndex = getRandomIndex(colorFunctions.length);
+ const randomColorFunction = colorFunctions[randomIndex];
+
+ randomColorFunction();
+
+`use strict`;
+function refreshTime() {
+   let datetime = new Date().toLocaleTimeString("en-au", { hour12: false });
+   timeText.textContent = datetime;
+}
+setInterval(refreshTime, 1000);
 
 // CONTACT TYPING TEXT
 let words = [

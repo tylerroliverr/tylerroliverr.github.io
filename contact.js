@@ -8,8 +8,8 @@ function showPage() {
 
 function pageLoaded() {
    document.getElementById('loader').classList.add('loaded');
-   darkStar.classList.add('stop-spin');
-   darkStar.classList.add('dark-shadow');
+   // darkStar.classList.add('stop-spin');
+   // darkStar.classList.add('dark-shadow');
 }
 
 function loadingStar() {
@@ -43,10 +43,10 @@ const selectService = document.getElementById('service');
 const textArea = document.querySelector('.text-area');
 
 const handleDarkColorChange = () => {
-   redStar.classList.remove('stop-spin');
-   redStar.classList.remove('red-shadow');
-   darkStar.classList.remove('stop-spin');
-   darkStar.classList.remove('dark-shadow');
+   // redStar.classList.remove('stop-spin');
+   // redStar.classList.remove('red-shadow');
+   // darkStar.classList.remove('stop-spin');
+   // darkStar.classList.remove('dark-shadow');
    body.className = 'body dark';
    footer.className = 'sticky-footer dark';
    logo.className = 'logo dark';
@@ -67,19 +67,19 @@ const handleDarkColorChange = () => {
    fieldSet.forEach((item) => {
       item.className = 'fieldset dark';
    });
-   lightStar.classList.add('stop-spin');
-   lightStar.classList.add('light-shadow');
+   // lightStar.classList.add('stop-spin');
+   // lightStar.classList.add('light-shadow');
 };
 
 const handleRedColorChange = () => {
-   darkStar.classList.remove('stop-spin');
-   darkStar.classList.remove('dark-shadow');
-   lightStar.classList.remove('stop-spin');
-   lightStar.classList.remove('light-shadow');
+   // darkStar.classList.remove('stop-spin');
+   // darkStar.classList.remove('dark-shadow');
+   // lightStar.classList.remove('stop-spin');
+   // lightStar.classList.remove('light-shadow');
    body.className = 'body red';
    footer.className = 'sticky-footer red';
    logo.className = 'logo red';
-   // timeText.className = 'time-text red';
+   timeText.className = 'time-text red';
    submitButton.className = 'submit red';
    formContainer.className = 'form red';
    textArea.className = 'text-area red';
@@ -96,19 +96,19 @@ const handleRedColorChange = () => {
    fieldSet.forEach((item) => {
       item.className = 'fieldset red';
    });
-   redStar.classList.add('stop-spin');
-   redStar.classList.add('red-shadow');
+   // redStar.classList.add('stop-spin');
+   // redStar.classList.add('red-shadow');
 };
 
 const handleLightColorChange = () => {
-   redStar.classList.remove('stop-spin');
-   redStar.classList.remove('red-shadow');
-   lightStar.classList.remove('stop-spin');
-   lightStar.classList.remove('light-shadow');
+   // redStar.classList.remove('stop-spin');
+   // redStar.classList.remove('red-shadow');
+   // lightStar.classList.remove('stop-spin');
+   // lightStar.classList.remove('light-shadow');
    body.className = 'body';
    footer.className = 'sticky-footer';
    logo.className = 'logo';
-   // timeText.className = 'time-text';
+   timeText.className = 'time-text';
    submitButton.className = 'submit';
    formContainer.className = 'form';
    textArea.className = 'text-area';
@@ -125,19 +125,34 @@ const handleLightColorChange = () => {
    fieldSet.forEach((item) => {
       item.className = 'fieldset';
    });
-   darkStar.classList.add('stop-spin');
-   darkStar.classList.add('dark-shadow');
+   // darkStar.classList.add('stop-spin');
+   // darkStar.classList.add('dark-shadow');
 };
 
-lightStar.addEventListener('click', handleDarkColorChange);
-darkStar.addEventListener('click', handleLightColorChange);
-redStar.addEventListener('click', handleRedColorChange);
+// lightStar.addEventListener('click', handleDarkColorChange);
+// darkStar.addEventListener('click', handleLightColorChange);
+// redStar.addEventListener('click', handleRedColorChange);
+
+const colorFunctions = [
+   handleDarkColorChange,
+   handleLightColorChange,
+   handleRedColorChange
+ ];
+ 
+ function getRandomIndex(max) {
+   return Math.floor(Math.random() * max);
+ }
+ 
+ const randomIndex = getRandomIndex(colorFunctions.length);
+ const randomColorFunction = colorFunctions[randomIndex];
+
+ randomColorFunction();
 
 
 //REAL-TIME
-// `use strict`;
-// function refreshTime() {
-//    var datetime = new Date().toLocaleTimeString("en-au", { hour12: false });
-//    timeText.textContent = datetime;
-// }
-// setInterval(refreshTime, 1000);
+`use strict`;
+function refreshTime() {
+   var datetime = new Date().toLocaleTimeString("en-au", { hour12: false });
+   timeText.textContent = datetime;
+}
+setInterval(refreshTime, 1000);
