@@ -8,6 +8,8 @@ function showPage() {
 
 function pageLoaded() {
    document.getElementById('loader').classList.add('loaded');
+   darkStar.classList.add('stop-spin');
+   darkStar.classList.add('dark-shadow');
 }
 
 function loadingStar() {
@@ -51,6 +53,10 @@ const projLink = document.querySelectorAll('.proj-link');
 const helpText = document.querySelector('.help-text');
 
 const handleDarkColorChange = () => {
+   redStar.classList.remove('stop-spin');
+   redStar.classList.remove('red-shadow');
+   darkStar.classList.remove('stop-spin');
+   darkStar.classList.remove('dark-shadow');
    body.className = 'body dark';
    footer.className = 'sticky-footer dark';
    logo.className = 'logo dark';
@@ -83,9 +89,15 @@ const handleDarkColorChange = () => {
    projLink.forEach((item) => {
       item.className = 'proj-link dark';
    });
+   lightStar.classList.add('stop-spin');
+   lightStar.classList.add('light-shadow');
 };
 
 const handleRedColorChange = () => {
+   darkStar.classList.remove('stop-spin');
+   darkStar.classList.remove('dark-shadow');
+   lightStar.classList.remove('stop-spin');
+   lightStar.classList.remove('light-shadow');
    body.className = 'body red';
    footer.className = 'sticky-footer red';
    logo.className = 'logo red';
@@ -118,9 +130,15 @@ const handleRedColorChange = () => {
    projLink.forEach((item) => {
       item.className = 'proj-link red';
    });
+   redStar.classList.add('stop-spin');
+   redStar.classList.add('red-shadow');
 };
 
 const handleLightColorChange = () => {
+   redStar.classList.remove('stop-spin');
+   redStar.classList.remove('red-shadow');
+   lightStar.classList.remove('stop-spin');
+   lightStar.classList.remove('light-shadow');
    body.className = 'body';
    footer.className = 'sticky-footer';
    logo.className = 'logo';
@@ -153,6 +171,8 @@ const handleLightColorChange = () => {
    projLink.forEach((item) => {
       item.className = 'proj-link';
    });
+   darkStar.classList.add('stop-spin');
+   darkStar.classList.add('dark-shadow');
 };
 
 lightStar.addEventListener('click', handleDarkColorChange);
