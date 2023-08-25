@@ -23,6 +23,7 @@
 :root {
    --regular-font-family: "studio-pro";
    --styled-font-family: "made-bonvoyage";
+   --garamond-font-family: "EB Garamond";
    --offwhite-color: #FAF9F8FF;
    --softblack-color: #0e1111;
    --blue-color: hsla(234, 100%, 50%, 1);
@@ -49,6 +50,7 @@ body {
 
 .body.red {
    background-color: var(--red-color);
+   background-image: url(./resources/images/nnnoise-red-2.svg);
 }
 
 a {
@@ -148,8 +150,23 @@ a {
  }
 
 /*============================================*/
-      /*===== HERO STAR =====*/
+         /*===== HERO STAR =====*/
 /*============================================*/
+
+/* .welcome-text-wrapper {
+   position: absolute;
+   top: 10px;
+   max-width: 100%;
+   padding: 2rem;
+}
+
+.welcome-text {
+   font-family: var(--styled-font-family);
+   color: var(--blue-color);
+   filter: blur(1px);
+   text-align: center;
+   font-size: 10vw;
+} */
 
 #hero-star {
    position: relative;
@@ -159,8 +176,6 @@ a {
    justify-content: center;
    align-items: center;
    overflow: hidden;
-   background-image: var(--background-noise);
-   filter: blur(9px);
    pointer-events: none;
 }
 
@@ -173,6 +188,31 @@ a {
    animation: scale-2 14s linear infinite;
    opacity: 0.9;
    pointer-events: none;
+   filter: blur(8px);
+}
+
+.hero-star-red {
+   overflow: hidden;
+   display: none;
+   align-items: center;
+   max-width: 50vw;
+   -webkit-animation: scale-2 14s linear infinite;
+   animation: scale-2 14s linear infinite;
+   opacity: 0.9;
+   pointer-events: none;
+   filter: blur(8px);
+}
+
+.hero-star-dark {
+   overflow: hidden;
+   display: none;
+   align-items: center;
+   max-width: 50vw;
+   -webkit-animation: scale-2 14s linear infinite;
+   animation: scale-2 14s linear infinite;
+   opacity: 0.9;
+   pointer-events: none;
+   filter: blur(8px);
 }
 
 @-webkit-keyframes scale-2 {
@@ -208,10 +248,11 @@ a {
 }
 
 #before-loading {
-   display: none;
+   /* display: none; */
 }
 
 #loader {
+   display: none;
 }
 
 /*============================================*/
@@ -283,10 +324,9 @@ a {
 
 .grid-text {
    font-size: 1.4rem;
-   font-family: var(--styled-font-family);
+   font-family: var(--regular-font-family);
    color: var(--blue-color);
-   font-style: italic;
-
+   /* font-style: italic; */
 }
 
 .grid-text.dark {
@@ -298,8 +338,9 @@ a {
 }
 
 .pop {
-   font-family: var(--regular-font-family);
+   font-family: var(--garamond-font-family);
    color: var(--blue-color);
+   font-style: italic;
 }
 
 .pop.dark {
@@ -312,6 +353,7 @@ a {
 
 .pop-end {
    font-size: 1rem;
+   font-family: var(--garamond-font-family);
 }
 
 /*============================================*/
@@ -367,9 +409,9 @@ a {
 
 .project-title {
    color: var(--blue-color);
-   font-family: var(--styled-font-family);
+   font-family: var(--regular-font-family);
    font-size: 1.4rem;
-   font-style: italic;
+   /* font-style: italic; */
 }
 
 .project-item-mobile {
@@ -395,13 +437,13 @@ a {
 
 .project-desc {
    color: var(--blue-color);
-   font-family: var(--styled-font-family);
+   font-family: var(--garamond-font-family);
    font-size: 0.9rem;
 }
 
 .project-desc-mobile {
    color: var(--blue-color);
-   font-family: var(--styled-font-family);
+   font-family: var(--garamond-font-family);
    font-size: 0.9rem;
 }
 
@@ -505,12 +547,11 @@ a {
 
 .help-text {
    margin-top: auto;
-   font-family: var(--styled-font-family);
-   font-size: 0.5rem;
+   font-family: var(--garamond-font-family);
+   font-size: 1rem;
    font-style: italic;
    text-align: center;
    color: var(--blue-color);
-   font-size: 10px;
 }
 
 .help-text.dark {
@@ -705,7 +746,7 @@ a {
 }
 
 .label {
-   font-family: var(--styled-font-family);
+   font-family: var(--regular-font-family);
    color: var(--blue-color);
    text-align: center;
    font-size: 1.1rem;
@@ -736,7 +777,7 @@ a {
 }
 
 .input[type=text] {
-   font-family: var(--styled-font-family);
+   font-family: var(--regular-font-family);
    color: var(--softblack-color);
    text-align: center;
 }
@@ -750,14 +791,14 @@ a {
 }
 
 ::placeholder {
-   font-family: var(--styled-font-family);
+   font-family: var(--regular-font-family);
    color: var(--blue-color);
    font-size: 1.1rem;
 }
 
 .text-area {
    padding: 15px;
-   font-family: var(--styled-font-family);
+   font-family: var(--regular-font-family);
    color: var(--softblack-color);
    background: transparent;
    border: 1px solid var(--blue-color);
@@ -776,7 +817,7 @@ a {
 }
 
 select {
-   font-family: var(--styled-font-family);
+   font-family: var(--regular-font-family);
    color: var(--softblack-color);
    text-align: center;
    font-size: 1.1rem;
@@ -800,7 +841,7 @@ select {
 }
 
 option {
-   font-family: var(--styled-font-family);
+   font-family: var(--regular-font-family);
    color: var(--softblack-color);
    background-color: var(--offwhite-color);
 }
@@ -966,6 +1007,14 @@ option {
       max-width: 20vw;
    }
 
+   .hero-star-red {
+      max-width: 20vw;
+   }
+
+   .hero-star-dark {
+      max-width: 20vw;
+   }
+
    .logo {
       margin-top: 0;
    }
@@ -1047,7 +1096,7 @@ option {
       padding-right: 10px;
       border: 2px solid var(--blue-color);
       color: var(--blue-color);
-      font-family: var(--styled-font-family);
+      font-family: var(--regular-font-family);
       transition: all 0.6s;
    }
 

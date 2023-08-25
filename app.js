@@ -52,6 +52,9 @@ const wordText = document.querySelectorAll('.word');
 const projImg = document.querySelectorAll('.project-img');
 const projLink = document.querySelectorAll('.proj-link');
 const helpText = document.querySelector('.help-text');
+const heroStar = document.querySelector('.hero-star');
+const heroStarRed = document.querySelector('.hero-star-red');
+const heroStarDark = document.querySelector('.hero-star-dark');
 
 const handleDarkColorChange = () => {
    // redStar.classList.remove('stop-spin');
@@ -63,6 +66,8 @@ const handleDarkColorChange = () => {
    logo.className = 'logo dark';
    timeText.className = 'time-text dark';
    helpText.className = 'help-text dark';
+   heroStar.style.display = 'none';
+   heroStarDark.style.display = 'flex';
    gridText.forEach((item) => {
       item.className = 'grid-text dark';
    });
@@ -104,6 +109,8 @@ const handleRedColorChange = () => {
    logo.className = 'logo red';
    timeText.className = 'time-text red';
    helpText.className = 'help-text red';
+   heroStar.style.display = 'none';
+   heroStarRed.style.display = 'flex';
    gridText.forEach((item) => {
       item.className = 'grid-text red';
    });
