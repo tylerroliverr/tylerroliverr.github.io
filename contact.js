@@ -41,6 +41,10 @@ const inputEmail = document.getElementById('email');
 const selectBudget = document.getElementById('budget');
 const selectService = document.getElementById('service');
 const textArea = document.querySelector('.text-area');
+const spinStar = document.querySelector('.loading-star');
+const spinStarRed = document.querySelector('.loading-star-red');
+const spinStarDark = document.querySelector('.loading-star-dark');
+const spinStarBlue = document.querySelector('.loading-star-blue');
 
 const handleDarkColorChange = () => {
    // redStar.classList.remove('stop-spin');
@@ -54,6 +58,8 @@ const handleDarkColorChange = () => {
    submitButton.className = 'submit dark';
    formContainer.className = 'form dark';
    textArea.className = 'text-area dark';
+   spinStar.style.display = 'none';
+   spinStarDark.style.display = 'flex';
    inputEmail.classList.add('dark');
    inputName.classList.add('dark');
    selectBudget.classList.add('dark');
@@ -71,6 +77,37 @@ const handleDarkColorChange = () => {
    // lightStar.classList.add('light-shadow');
 };
 
+const handleBlueColorChange = () => {
+   // redStar.classList.remove('stop-spin');
+   // redStar.classList.remove('red-shadow');
+   // darkStar.classList.remove('stop-spin');
+   // darkStar.classList.remove('dark-shadow');
+   body.className = 'body blue';
+   footer.className = 'sticky-footer blue';
+   logo.className = 'logo blue';
+   timeText.className = 'time-text blue';
+   submitButton.className = 'submit blue';
+   formContainer.className = 'form blue';
+   textArea.className = 'text-area blue';
+   spinStar.style.display = 'none';
+   spinStarBlue.style.display = 'flex';
+   inputEmail.classList.add('blue');
+   inputName.classList.add('blue');
+   selectBudget.classList.add('blue');
+   selectService.classList.add('blue');
+   inputField.forEach((item) => {
+      item.className = 'input blue';
+   });
+   labelText.forEach((item) => {
+      item.className = 'label blue';
+   });
+   fieldSet.forEach((item) => {
+      item.className = 'fieldset blue';
+   });
+   // lightStar.classList.add('stop-spin');
+   // lightStar.classList.add('light-shadow');
+};
+
 const handleRedColorChange = () => {
    // darkStar.classList.remove('stop-spin');
    // darkStar.classList.remove('dark-shadow');
@@ -83,6 +120,8 @@ const handleRedColorChange = () => {
    submitButton.className = 'submit red';
    formContainer.className = 'form red';
    textArea.className = 'text-area red';
+   spinStar.style.display = 'none';
+   spinStarRed.style.display = 'flex';
    inputEmail.classList.add('red');
    inputName.classList.add('red');
    selectBudget.classList.add('red');
@@ -136,7 +175,8 @@ const handleLightColorChange = () => {
 const colorFunctions = [
    handleDarkColorChange,
    handleLightColorChange,
-   handleRedColorChange
+   handleRedColorChange,
+   handleBlueColorChange
  ];
  
  function getRandomIndex(max) {

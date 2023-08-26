@@ -55,6 +55,11 @@ const helpText = document.querySelector('.help-text');
 const heroStar = document.querySelector('.hero-star');
 const heroStarRed = document.querySelector('.hero-star-red');
 const heroStarDark = document.querySelector('.hero-star-dark');
+const heroStarBlue = document.querySelector('.hero-star-blue');
+const spinStar = document.querySelector('.loading-star');
+const spinStarRed = document.querySelector('.loading-star-red');
+const spinStarDark = document.querySelector('.loading-star-dark');
+const spinStarBlue = document.querySelector('.loading-star-blue');
 
 const handleDarkColorChange = () => {
    // redStar.classList.remove('stop-spin');
@@ -68,6 +73,8 @@ const handleDarkColorChange = () => {
    helpText.className = 'help-text dark';
    heroStar.style.display = 'none';
    heroStarDark.style.display = 'flex';
+   spinStar.style.display = 'none';
+   spinStarDark.style.display = 'flex';
    gridText.forEach((item) => {
       item.className = 'grid-text dark';
    });
@@ -99,6 +106,51 @@ const handleDarkColorChange = () => {
    // lightStar.classList.add('light-shadow');
 };
 
+const handleBlueColorChange = () => {
+   // redStar.classList.remove('stop-spin');
+   // redStar.classList.remove('red-shadow');
+   // darkStar.classList.remove('stop-spin');
+   // darkStar.classList.remove('dark-shadow');
+   body.className = 'body blue';
+   footer.className = 'sticky-footer blue';
+   logo.className = 'logo blue';
+   timeText.className = 'time-text blue';
+   helpText.className = 'help-text blue';
+   heroStar.style.display = 'none';
+   heroStarBlue.style.display = 'flex';
+   spinStar.style.display = 'none';
+   spinStarBlue.style.display = 'flex';
+   gridText.forEach((item) => {
+      item.className = 'grid-text blue';
+   });
+   heroLink.forEach((item) => {
+      item.className = 'hero-link blue';
+   });
+   pop.forEach((item) => {
+      item.className = 'pop blue';
+   });
+   projTitle.forEach((item) => {
+      item.className = 'project-title blue';
+   });
+   projDesc.forEach((item) => {
+      item.className = 'project-desc blue';
+   });
+   projDescMob.forEach((item) => {
+      item.className = 'project-desc-mobile blue';
+   });
+   wordText.forEach((item) => {
+      item.className = 'word blue';
+   });
+   projImg.forEach((item) => {
+      item.className = 'project-img blue';
+   });
+   projLink.forEach((item) => {
+      item.className = 'proj-link blue';
+   });
+   // lightStar.classList.add('stop-spin');
+   // lightStar.classList.add('light-shadow');
+};
+
 const handleRedColorChange = () => {
    // darkStar.classList.remove('stop-spin');
    // darkStar.classList.remove('dark-shadow');
@@ -111,6 +163,8 @@ const handleRedColorChange = () => {
    helpText.className = 'help-text red';
    heroStar.style.display = 'none';
    heroStarRed.style.display = 'flex';
+   spinStar.style.display = 'none';
+   spinStarRed.style.display = 'flex';
    gridText.forEach((item) => {
       item.className = 'grid-text red';
    });
@@ -190,7 +244,8 @@ const handleLightColorChange = () => {
 const colorFunctions = [
    handleDarkColorChange,
    handleLightColorChange,
-   handleRedColorChange
+   handleRedColorChange,
+   handleBlueColorChange
  ];
  
  function getRandomIndex(max) {
