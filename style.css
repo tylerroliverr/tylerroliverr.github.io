@@ -487,6 +487,7 @@ a {
 }
 
 #desc-right {
+   max-width: 100%;
    text-align: right;
 }
 
@@ -502,6 +503,7 @@ a {
    font-family: var(--garamond-font-family);
    font-style: italic;
    font-size: 0.9rem;
+   max-width: 80%;
 }
 
 .project-title.dark {
