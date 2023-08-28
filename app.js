@@ -72,6 +72,8 @@ const handleDarkColorChange = () => {
    timeText.className = 'time-text dark';
    helpText.className = 'help-text dark';
    heroStar.style.display = 'none';
+   heroStarBlue.style.display = 'none';
+   heroStarRed.style.display = 'none';
    heroStarDark.style.display = 'flex';
    spinStar.style.display = 'none';
    spinStarDark.style.display = 'flex';
@@ -117,6 +119,8 @@ const handleBlueColorChange = () => {
    timeText.className = 'time-text blue';
    helpText.className = 'help-text blue';
    heroStar.style.display = 'none';
+   heroStarRed.style.display = 'none';
+   heroStarDark.style.display = 'none';
    heroStarBlue.style.display = 'flex';
    spinStar.style.display = 'none';
    spinStarBlue.style.display = 'flex';
@@ -162,6 +166,8 @@ const handleRedColorChange = () => {
    timeText.className = 'time-text red';
    helpText.className = 'help-text red';
    heroStar.style.display = 'none';
+   heroStarBlue.style.display = 'none';
+   heroStarDark.style.display = 'none';
    heroStarRed.style.display = 'flex';
    spinStar.style.display = 'none';
    spinStarRed.style.display = 'flex';
@@ -206,6 +212,10 @@ const handleLightColorChange = () => {
    logo.className = 'logo';
    timeText.className = 'time-text';
    helpText.className = 'help-text';
+   heroStarBlue.style.display = 'none';
+   heroStarDark.style.display = 'none';
+   heroStarRed.style.display = 'none';
+   heroStar.style.display = 'flex';
    gridText.forEach((item) => {
       item.className = 'grid-text';
    });
@@ -246,16 +256,22 @@ const colorFunctions = [
    handleLightColorChange,
    handleRedColorChange,
    handleBlueColorChange
- ];
+];
  
- function getRandomIndex(max) {
+function getRandomIndex(max) {
    return Math.floor(Math.random() * max);
- }
- 
- const randomIndex = getRandomIndex(colorFunctions.length);
- const randomColorFunction = colorFunctions[randomIndex];
+}
 
- randomColorFunction();
+// const randomIndex = getRandomIndex(colorFunctions.length);
+// const randomColorFunction = colorFunctions[randomIndex];
+
+function changeRandomColor() {
+   const randomIndex = getRandomIndex(colorFunctions.length);
+   const randomColorFunction = colorFunctions[randomIndex];
+   randomColorFunction();
+}
+
+setInterval(changeRandomColor, 11500);
 
 `use strict`;
 function refreshTime() {

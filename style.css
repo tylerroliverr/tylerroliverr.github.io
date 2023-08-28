@@ -35,7 +35,7 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
-   transition: color 0.65s ease;
+   transition: all 1s;
 }
 
 body {
@@ -670,7 +670,7 @@ a {
    background-image: var(--background-noise);
    padding-top: 4px;
    padding-bottom: 6px;
-   opacity: 0.9;
+   opacity: 0.94;
 }
 
 .sticky-footer.dark {
@@ -705,7 +705,6 @@ a {
 
 .time-text.dark {
    color: var(--offwhite-color);
-   transition: all 0.2s;
 }
 
 .time-text.red {
