@@ -1,0 +1,221 @@
+/*=========================*/
+    /* ROOT STYLES */
+/*=========================*/
+
+@font-face {
+    font-family: "estonia";
+    src: url('./resources/fonts/Estonia-Regular.ttf') format("ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.estonia {
+    font-family: var(--estonia-font);
+}
+
+:root {
+    --green-color: #2EAE65;
+    --black-color: #101010;
+    --white-color: #FDF7EB;
+    --blue-color: #3742FA;
+    --estonia-font: "Estonia", cursive;
+}
+body {
+    background-color: var(--white-color);
+    color: var(--green-color);
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--green-color);
+    transition: all ease 1s;
+}
+
+/*=========================*/
+    /* TITLES & BREAKS */
+/*=========================*/
+
+.header {
+    display: flex;
+    margin: 1rem;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.after-header {
+    animation: slideUp ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.floral-left,
+.floral-right {
+    margin: auto;
+    font-size: 1.4rem;
+}
+
+.title {
+    font-family: var(--estonia-font);
+    text-align: center;
+}
+
+.title-middle {
+    font-size: 3.8rem;
+}
+
+.about-me {
+    text-align: center;
+    padding: .65rem 2rem 1.2rem 2rem;
+    font-size: .70rem;
+    font-family: system-ui, sans-serif;
+}
+
+.sub-header {
+    display: flex;
+    margin: 1rem;
+}
+
+.sub-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.sub-floral-left,
+.sub-floral-right {
+    margin: auto;
+    font-size: 1rem;
+}
+
+.star-break {
+    text-align: center;
+    margin: 2.4rem 0;
+}
+
+.project-grid {
+    /* writing-mode: vertical-lr;
+    text-orientation: mixed; */
+    margin: auto;
+}
+
+.project-title {
+    padding: 1.5rem 1.3rem;
+    font-family: system-ui, sans-serif;
+    font-size: .75rem;
+    font-style: italic;
+}
+
+.link-block {
+    display: flex;
+}
+
+.link-title {
+    margin: auto;
+    width: 50%;
+}
+
+.link-arrow {
+    margin: auto;
+}
+
+.arrow {
+    font-size: 1.2rem;
+}
+
+.desc {
+    font-size: .5rem;
+    font-style: normal;
+    padding-top: 4px;
+}
+
+.line {
+    width: 90%;
+    height: 1px;
+    margin: auto;
+    background-color: var(--green-color);
+}
+
+/*=========================*/
+    /* DESKTOP */
+/*=========================*/
+
+a:hover {
+    color: var(--black-color);
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    * {
+        cursor: none;
+    }
+
+    .cursor {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        mix-blend-mode: difference;
+        background-color: var(--white-color);
+    }
+
+    .header {
+        margin-bottom: 4rem;
+    }
+
+    .title-middle {
+        font-size: 5.5rem;
+        padding: 1rem 6rem;
+    }
+
+    .floral-left,
+    .floral-right {
+        font-size: 1.6rem;
+    }
+
+    .about-me {
+        font-size: .9rem;
+    }
+
+    .star-break {
+        margin: 5rem 0;
+    }
+
+    .sub-title {
+        font-size: 4rem;
+    }
+
+    .project-title {
+        padding: 1.5rem 2rem;
+        font-size: .9rem;
+    }
+}
