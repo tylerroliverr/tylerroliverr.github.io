@@ -73,11 +73,11 @@ a {
     animation-fill-mode: forwards;
 }
 
-/* .after-header {
+.after-header {
     animation: slideUp ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-} */
+}
 
 .floral-left,
 .floral-right {
