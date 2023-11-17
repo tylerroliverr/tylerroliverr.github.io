@@ -36,7 +36,6 @@ body {
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
-        transform: scale(0.2);
     }
     100% {
         opacity: 1;
@@ -72,11 +71,11 @@ a {
     animation-fill-mode: forwards;
 }
 
-.after-header {
+/* .after-header {
     animation: slideUp ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
+} */
 
 .floral-left,
 .floral-right {
@@ -98,6 +97,7 @@ a {
     padding: .65rem 2rem 1.2rem 2rem;
     font-size: .70rem;
     font-family: system-ui, sans-serif;
+    height: 80vh;
 }
 
 .sub-header {
@@ -118,7 +118,15 @@ a {
 
 .star-break {
     text-align: center;
-    margin: 2.4rem 0;
+    margin: 1.1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.star {
+    font-size: .7rem;
+    margin: 0 .4rem;
 }
 
 .project-grid {
