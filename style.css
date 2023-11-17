@@ -17,6 +17,10 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    animation: fadeInAnimation ease 3s;
+}
+
 .estonia {
     font-family: var(--estonia-font);
 }
@@ -67,16 +71,15 @@ a {
 
 .header {
     margin: 0 0 1rem 0;
-    animation: fadeInAnimation ease 3s;
     position: sticky;
     top: 0;
     padding-top: .7rem;
     background-color: var(--white-color);
 }
 
-.after-header {
+/* .after-header {
     animation: slideUp ease 3s;
-}
+} */
 
 .floral-left,
 .floral-right {
@@ -192,13 +195,23 @@ a:hover {
 
 @media screen and (min-width: 768px) {
 
-    .cursor {
+    #cursor-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        mix-blend-mode: difference;
+        z-index: 1;
+      }
+
+    #custom-cursor {
         position: absolute;
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        mix-blend-mode: difference;
-        background-color: var(--white-color);
+        background-color: white;
+        z-index: 1;
+        transform: translate(-50%, -50%);
     }
 
     .header {
