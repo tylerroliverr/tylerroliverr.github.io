@@ -94,10 +94,9 @@ a {
 
 .about-me {
     text-align: center;
-    padding: .65rem 2rem 1.2rem 2rem;
+    padding: 1.85rem 2rem 3.2rem 2rem;
     font-size: .70rem;
     font-family: system-ui, sans-serif;
-    height: 80vh;
 }
 
 .sub-header {
@@ -113,7 +112,7 @@ a {
 .sub-floral-left,
 .sub-floral-right {
     margin: auto;
-    font-size: 1rem;
+    font-size: .85rem;
 }
 
 .star-break {
@@ -125,7 +124,7 @@ a {
 }
 
 .star {
-    font-size: .7rem;
+    font-size: .55rem;
     margin: 0 .4rem;
 }
 
@@ -156,7 +155,7 @@ a {
 }
 
 .arrow {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .desc {
