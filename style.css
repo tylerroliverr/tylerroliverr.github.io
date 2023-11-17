@@ -26,11 +26,13 @@ html {
     --black-color: #101010;
     --white-color: #FDF7EB;
     --blue-color: #3742FA;
+    --red-color: #E55039;
+    --times-new-font: "Times New Roman";
     --estonia-font: "Estonia", cursive;
 }
 body {
     background-color: var(--white-color);
-    color: var(--green-color);
+    color: var(--red-color);
 }
 
 @keyframes fadeInAnimation {
@@ -55,7 +57,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--green-color);
+    color: var(--red-color);
     transition: all ease 1s;
 }
 
@@ -84,12 +86,13 @@ a {
 }
 
 .title {
-    font-family: var(--estonia-font);
+    font-family: var(--times-new-font);
+    font-style: italic;
     text-align: center;
 }
 
 .title-middle {
-    font-size: 3.8rem;
+    font-size: 3rem;
 }
 
 .about-me {
@@ -105,7 +108,7 @@ a {
 }
 
 .sub-title {
-    font-size: 3rem;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
 }
 
@@ -117,7 +120,7 @@ a {
 
 .star-break {
     text-align: center;
-    margin: 1.1rem 0;
+    margin: 3rem 0 1.5rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +128,7 @@ a {
 
 .star {
     font-size: .55rem;
-    margin: 0 .4rem;
+    margin: 0 .6rem;
 }
 
 .project-grid {
@@ -168,7 +171,11 @@ a {
     width: 90%;
     height: 1px;
     margin: auto;
-    background-color: var(--green-color);
+    background-color: var(--red-color);
+}
+
+.after-projects {
+    margin-top: 5rem;
 }
 
 /*=========================*/
@@ -226,3 +233,82 @@ a:hover {
         font-size: .9rem;
     }
 }
+
+/*=========================*/
+    /* CONTACT */
+/*=========================*/
+
+::placeholder {
+    font-family: system-ui, sans-serif;
+    color: var(--red-color);
+    opacity: 0.5;
+    font-style: italic;
+    font-size: 0.7rem;
+}
+
+.input-container {
+    position: relative;
+    margin: 30px auto;
+    width: 80%;
+  }
+  
+  .input-container input[type="text"] {
+    font-size: .7rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--red-color);
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+    color: var(--black-color);
+  }
+  
+  .input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--red-color);
+    opacity: 0.3;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family: system-ui, sans-serif;
+    font-size: .7rem;
+  }
+  
+  .input-container input[type="text"]:focus ~ .label,
+  .input-container input[type="text"]:valid ~ .label {
+    top: -20px;
+    color: var(--red-color);
+    opacity: 1;
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--black-color);
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+  .input-container input[type="text"]:focus ~ .underline,
+  .input-container input[type="text"]:valid ~ .underline {
+    transform: scaleX(1);
+  }
+
+  .submit {
+    font-family: var(--times-new-font);
+    font-style: italic;
+    border: none;
+    background-color: transparent;
+    color: var(--red-color);
+    font-size: .8rem;
+    cursor: pointer;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin-bottom: 2rem;
+ }
