@@ -73,8 +73,9 @@ a {
     margin: 0 0 1rem 0;
     position: sticky;
     top: 0;
-    padding-top: .7rem;
+    padding-top: .5rem;
     background-color: var(--white-color);
+    z-index: 1;
 }
 
 /* .after-header {
@@ -98,9 +99,8 @@ a {
 }
 
 .about-me {
-    text-align: center;
-    padding: 1.85rem 2rem 3.2rem 2rem;
-    font-size: .70rem;
+    padding: 2.4rem 2.5rem 3.5rem 2.8rem;
+    font-size: .80rem;
     font-family: system-ui, sans-serif;
 }
 
@@ -122,6 +122,23 @@ a {
 .sub-floral-right {
     margin: auto;
     font-size: .85rem;
+}
+
+.small-img {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.blurb-img {
+    height: 125px;
+    filter: grayscale(100%);
+    transition: all ease 2s;
+}
+
+.blurb-img:hover,
+.blurb-img:active {
+    filter: grayscale(20%);
 }
 
 .star-break {
@@ -174,7 +191,7 @@ a {
 }
 
 .line {
-    width: 90%;
+    width: 100%;
     height: 1px;
     margin: auto;
     background-color: var(--green-color);
@@ -184,11 +201,31 @@ a {
     width: 100%;
     height: 1px;
     margin: auto;
+    margin-top: 0.6rem;
     background-color: var(--green-color);
 }
 
 .after-projects {
     margin-top: 5rem;
+}
+
+.thanks-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.thanks {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+}
+
+.back {
+    font-family: system-ui, sans-serif;
 }
 
 /*=========================*/
@@ -221,6 +258,10 @@ a:hover {
         transform: translate(-50%, -50%);
     }
 
+    * {
+        cursor: none;
+    }
+
     .header {
         margin-bottom: 4rem;
     }
@@ -250,20 +291,30 @@ a:hover {
 
     .about-me {
         font-size: .9rem;
+        padding: 2.5rem 2rem 7rem 2rem;
     }
 
     .star-break {
         margin: 5rem 0;
     }
 
+    .link-title {
+        width: 80%;
+    }
+
     .sub-title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .project-title {
         padding: 1.5rem 2rem;
         font-size: .9rem;
     }
+
+    .star {
+        font-size: 1rem;
+    }
+
 }
 
 /*=========================*/
@@ -283,11 +334,6 @@ a:hover {
     margin: 30px auto;
     width: 80%;
   }
-
-  #input {
-    border: none;
-    border-bottom: 1px solid var(--green-color);
-}
   
   .input-container input[type="text"] {
     font-size: .7rem;
@@ -296,6 +342,8 @@ a:hover {
     background-color: transparent;
     outline: none;
     color: var(--black-color);
+    border: none;
+    border-bottom: 1px solid var(--green-color);
   }
   
   .input-container .label {
@@ -346,11 +394,17 @@ a:hover {
     border: none;
     background-color: transparent;
     color: var(--green-color);
-    font-size: .8rem;
+    font-size: 1rem;
     cursor: pointer;
     margin: auto;
     display: flex;
     justify-content: center;
     width: 40%;
     margin-bottom: 2rem;
+    transition: all ease 1s;
+ }
+
+ .submit:hover {
+    color: var(--black-color);
+    font-size: 2rem;
  }

@@ -1,7 +1,12 @@
-const cursor = document.querySelector(".cursor");
-const body = document.querySelector("body");
+document.addEventListener('DOMContentLoaded', function () {
+    var cursorContainer = document.getElementById('cursor-container');
+    var customCursor = document.getElementById('custom-cursor');
 
-body.addEventListener("mousemove", function(dets){
-    cursor.style.left = `${dets.x + 0}px`;
-    cursor.style.top = `${dets.y + 0}px`;
-})
+    document.addEventListener('mousemove', function (e) {
+      var x = e.clientX;
+      var y = e.clientY;
+
+      customCursor.style.left = x + 'px';
+      customCursor.style.top = y + 'px';
+    });
+  });
