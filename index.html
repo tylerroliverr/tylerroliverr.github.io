@@ -1,0 +1,187 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Space+Mono&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="./resources/images/star-fill-blue.svg">
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+   <meta name="description" content="Creative Web Developer and Designer based in Melbourne (Naarm). I create stunning, yet simple and exceptional websites! Are you a small business or creative looking for a website to showcase your brand?">
+   <title>BLUEROOM STUDIOS</title>
+</head>
+<body class='body' onload="loadingStar()">
+
+   <div id="loader">
+      <img class="loading-star" src="./resources/images/star-fill-blue.svg" />
+      <img class="loading-star-red" src="./resources/images/star-fill-redtheme.svg" />
+      <img class="loading-star-dark" src="./resources/images/star-fill-darktheme.svg" />
+      <img class="loading-star-blue" src="./resources/images/star-fill-bluetheme.svg" />
+   </div>
+
+   <main id="before-loading" class="animate-after-load">
+
+      <div class="cursor"></div>
+
+      <!-- START STICKY HEADER -->
+      <div class="header">
+         <div class="header-wrapper">
+            <h1 class="logo">BLUEROOM</h1>
+         </div>
+      </div>
+      <!-- END STICKY HEADER -->
+
+      <div id="hero-star">
+         <img class="hero-star" src="./resources/images/star-fill-blue.svg" />
+         <img class="hero-star-red" src="./resources/images/star-fill-redtheme.svg" />
+         <img class="hero-star-dark" src="./resources/images/star-fill-darktheme.svg" />
+         <img class="hero-star-blue" src="./resources/images/star-fill-bluetheme.svg" />
+         <!-- <div class="welcome-text-wrapper">
+            <h2 class="welcome-text">Creative Web Developer</h2> <br> <h2 class="welcome-text">& Designer</h2>
+         </div> -->
+      </div>
+
+      <!-- START GRID -->
+      <div class="grid-container">
+         <div class="grid-item reveal-bottom">
+            <p class="grid-text"> <span class="pop">Hey! My name's Tyler,</span> I'm a passionate creative web developer, dedicated to delivering <span class="pop">simple yet exceptional websites.</span>
+               <br /><br />
+            I have been interested in programming since <span class="pop"> forever </span>& have been honing my skills for <span class="pop">10+ years.</span> I thrive working with <span class="pop">like-minded creatives</span> to produce <span class="pop">breathtaking experiences.</span> 
+               <br> <br>
+            I'm all about creating <span class="pop">authentic content</span> so people know who the heck you are and <span class="pop">remember</span> your brand. 
+               <br> <br>
+            <span class="pop" id="pop-end">★ Btw; currently residing in Melbourne (Naarm), Australia.</span>
+            </p>
+         </div>
+      </div>
+      <!-- END GRID -->
+
+      <!-- START PROJECTS -->
+
+         <!-- START DESKTOP PROJECTS -->
+      <div class="projects-container">
+         <div class="project-img-item reveal">
+            <img src="./resources/images/01-mockup.png" alt="" class="project-img">
+         </div>
+         <div class="project-item reveal">
+            <p id="left" class="project-title">TOTOS</p>
+            <p class="project-desc left">★ ui/ux design, e-commerce, motion, product management</p>
+            <a href="https://damnslank-857226620ba1657-b2871c3ca23ff.webflow.io/" class="open-link" target="_blank">
+               <button class="proj-link">take me</button>
+            </a>
+         </div>
+      </div>
+
+      <div class="projects-container-right">
+         <div class="project-item reveal-right">
+            <p id="right" class="project-title">Byron Bay Building</p>
+            <p class="project-desc" id="right">★ ui/ux design, motion, web design</p>
+            <a href="https://www.byronbaybuilding.com.au/" class="open-link-right" target="_blank">
+               <button class="proj-link">take me</button>
+            </a>
+         </div>
+         <div class="project-img-item reveal-right">
+            <img src="./resources/images/05-mockup.jpg" alt="" class="project-img">
+         </div>
+      </div>
+
+      <div class="projects-container">
+         <div class="project-img-item reveal">
+            <img src="./resources/images/02-mockup.png" alt="" class="project-img">
+         </div>
+         <div class="project-item reveal">
+            <p id="left" class="project-title">Blueroom Clothing</p>
+            <p class="project-desc left">★ e-commerce, product management, ui/ux design, motion</p>
+            <a href="https://readymag.com/u4218806839/4111679/" class="open-link" target="_blank">
+               <button class="proj-link">take me</button>
+            </a>
+         </div>
+      </div>
+         <!-- END DESKTOP PROJECTS -->
+
+
+         <!-- START MOBILE PROJECTS -->
+         <div class="projects-container-mobile">
+            <div class="project-img-item reveal">
+               <a href="https://damnslank-857226620ba1657-b2871c3ca23ff.webflow.io/" target="_blank">
+                  <img src="./resources/images/01-mockup.png" alt="" class="project-img">
+               </a>
+            </div>
+            <div class="project-item-mobile reveal">
+               <p class="project-title">TOTOS Store</p>
+               <p class="project-desc-mobile">★ ui/ux design, e-commerce, motion, product management</p>
+            </div> 
+         </div>
+
+      <div class="projects-container-mobile">
+         <div class="project-img-item reveal-right">
+            <a href="https://www.byronbaybuilding.com.au/" target="_blank">
+               <img src="./resources/images/05-mockup.jpg" alt="" class="project-img">
+            </a>
+         </div>
+         <div class="project-item-mobile reveal-right">
+            <p class="project-title" id="title-right">Byron Bay Building</p>
+            <p class="project-desc-mobile" id="desc-right">★ ui/ux design, motion, web design</p>
+         </div>
+      </div>
+
+      <div class="projects-container-mobile">
+         <div class="project-img-item reveal">
+            <a href="https://readymag.com/u4218806839/4111679/" target="_blank">
+               <img src="./resources/images/02-mockup.png" alt="" class="project-img">
+            </a>
+         </div>
+         <div class="project-item-mobile reveal">
+            <p class="project-title">Blueroom Clothing</p>
+            <p class="project-desc-mobile">★ e-commerce, product management, ui/ux design, motion</p>
+         </div>
+      </div>
+         <!-- END MOBILE PROJECTS -->
+
+      <!-- END PROJECTS -->
+
+      <!-- START HERO LINKS -->
+      <div class="hero-links-container">
+         <div class="reveal-bottom">
+            <div class="word"></div>
+         </div>
+         <div class="reveal-bottom">
+            <div class="contact">
+               <a href="./contact-form.html" class="email-btn">
+                  <h2 class="hero-link">email me</h2>
+               </a>
+            </div>
+         </div>
+      </div>
+      <div class="end">
+         <p class="help-text">★Blueroom wishes to acknowledge the traditional owners of the land on which we operate on, the Wurundjeri people of the Kulin Nation, and pay my respects to their Elders past, present and emerging.</p>
+      </div>
+      <!-- END HERO LINKS -->
+
+      <!-- START STICKY FOOTER -->
+         <div class="sticky-footer">
+            <!-- <div class="star-wrapper">
+               <div class="star-img">
+                  <img class="star-light" src="./resources/images/star-fill-dark.svg" alt="">
+               </div>
+               <div class="star-img">
+                  <img class="star-red" src="./resources/images/star-fill-red.svg" alt="">
+               </div>
+               <div class="star-img">
+                  <img class="star-dark" src="./resources/images/star-fill-light.svg" alt="">
+               </div>
+            </div> -->
+
+            <div class="time-wrapper">
+               <p class="time-text"></p>
+            </div>
+
+         </div>
+      <!-- END STICKY FOOTER -->
+
+   </main>
+   
+   <script src="app.js"></script>
+</body>
+</html>

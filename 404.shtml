@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.css">
+   <link rel="icon" type="image/x-icon" href="./resources/images/star-fill-blue.svg">
+   <title>404</title>
+</head>
+<body>
+
+    <div class="error-wrapper">
+        <h1 class="logo error404">★</h1>
+        <h1 class="logo error404">ERROR 404</h1>
+        <br>
+        <h1 class="logo error404">errrr seems like u r in the wrong place</h1>
+        <h1 class="logo error404">★</h1>
+     </div>
+
+</body>
+</html>
