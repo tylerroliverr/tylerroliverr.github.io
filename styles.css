@@ -216,12 +216,10 @@ a {
 .gif-wrapper {
     display: flex;
     justify-content: center;
-    height: 100px;
 }
 
  .gif {
     width: 120px;
-    height: fit-content;
     border-radius: 10px;
  }
 
