@@ -1,0 +1,387 @@
+/* ++++++++++ */
+/* Font Faces */
+/* ++++++++++ */
+@font-face {
+    font-family: "studio-pro";
+    src: url(./resources/fonts/studio-pro-regular-webfont.woff);
+}
+
+@font-face {
+    font-family: "grotesk";
+    src: url(./resources/fonts/ABCMonumentGrotesk-Medium.woff2);
+}
+
+/* +++++++++++ */
+/* Body Styles */
+/* +++++++++++ */
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: color 0.4s ease, background-color 0.4s ease;
+    -ms-transition: color 0.4s ease, background-color 0.4s ease;
+    -webkit-transition: color 0.4s ease, background-color 0.4s ease;
+    background-color: var(--background-clr);
+    overflow-x: hidden;
+}
+
+/* +++++++++++++++++++++++ */
+/* Root Styles & Dark mode */
+/* +++++++++++++++++++++++ */
+
+:root {
+    --studio-font: "studio-pro";
+    --grotesk-font: "grotesk";
+    --accent-clr: #000AFF;
+    --white-clr: #FAFAFA;
+    --black-clr: #060606;
+
+    --background-clr: var(--white-clr);
+    --text-clr: var(--black-clr);
+
+    --uni-padding: 30px;
+}
+
+.darkMode {
+    --background-clr: var(--black-clr);
+    --text-clr: var(--white-clr);
+    --accent-clr: var(--white-clr);
+}
+
+a {
+    all: unset;
+    cursor: cursor !important;
+}
+
+/* +++++++++++++ */
+/* Custom Cursor */
+/* +++++++++++++ */
+
+#cursor-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -2;
+  }
+ 
+ #custom-cursor {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    filter: blur(58px);
+    background-color: var(--accent-clr);
+    z-index: -2;
+    transform: translate(-50%, -50%);
+    transition: transform .3s ease-out;
+ }
+
+ .big {
+    height: 100vh;
+ }
+
+/* +++++++++++++ */
+/* Header Styles */
+/* +++++++++++++ */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--text-clr);
+    filter: blur(0.13rem);
+    /* font-style: italic; */
+    font-family: var(--studio-font);
+    font-size: 4rem;
+    text-align: center;
+}
+
+/* ++++++++++++++++ */
+/* Dark Mode Toggle */
+/* ++++++++++++++++ */
+
+.toggle {
+    color: var(--text-clr);
+}
+
+.toggle:hover {
+    cursor: pointer;
+}
+
+/* +++++++++ */
+/* Hero Star */
+/* +++++++++ */
+
+.hero-star-svg {
+    width: 200px;
+    height: 200px;
+    filter: blur(0.3rem);
+}
+
+.hero-star {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative;
+    z-index: -2; */
+}
+
+.draggable-info {
+    position: absolute;
+    font-family: var(--studio-font);
+    color: var(--text-clr);
+    font-size: 0.5rem;
+    font-style: italic;
+    bottom: 2%;
+}
+
+/* +++++++ */
+/* Profile */
+/* +++++++ */
+
+.profile-wrapper {
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+    padding: 0 var(--uni-padding) var(--uni-padding) var(--uni-padding);
+}
+
+.profile-name {
+    font-size: 3.2rem;
+    margin: auto;
+}
+
+.profile-name,
+.profile-desc {
+    font-family: "EB Garamond";
+    color: var(--text-clr);
+    font-weight: 500;
+}
+
+.img-wrapper {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+}
+
+.blur {
+    background-color: var(--accent-clr);
+    filter: blur(60px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.profile-pic {
+    width: 220px;
+    border-radius: 0;
+    display: block;
+    position: relative;
+    z-index: -1;
+ }
+
+/* ++++++++ */
+/* About Me */
+/* ++++++++ */
+
+.pop-soft {
+    font-style: italic;
+}
+
+.pop-bold {
+    font-family: var(--grotesk-font);
+}
+
+.pop-minimal {
+    font-size: 1.1rem;
+}
+
+.about-me {
+    font-family: var(--studio-font);
+    color: var(--text-clr );
+    display: flex;
+    padding: 0 var(--uni-padding);
+    font-size: 1.3rem;
+}
+
+.gif-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+ .gif {
+    width: 120px;
+    height: fit-content;
+    border-radius: 100%;
+ }
+
+/* +++++++++++++ */
+/* Dragg Section */
+/* +++++++++++++ */
+
+.drag-container {
+    height: 30vh;
+    margin: var(--uni-padding);
+}
+
+.drag {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* ++++++++++++ */
+/* Contact Form */
+/* ++++++++++++ */
+
+.contact {
+    margin: var(--uni-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-text {
+    font-family: var(--studio-font);
+    color: var(--text-clr);
+    font-weight: 500;
+}
+
+form {
+    font-family: var(--studio-font);
+    margin: var(--uni-padding);
+}
+
+::placeholder {
+    /* font-family: system-ui, sans-serif; */
+    color: var(--text-clr);
+    opacity: 0.5;
+    font-style: italic;
+    font-size: 0.7rem;
+ }
+ 
+ .input-container {
+    position: relative;
+    margin: 30px auto;
+    width: 80%;
+  }
+  
+  .input-container input[type="text"] {
+    font-size: .7rem;
+    width: 100%;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+    color: var(--text-clr);
+    border: none;
+    border-bottom: 1px solid var(--text-clr);
+  }
+  
+  .input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--text-clr);
+    opacity: 0.3;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    /* font-family: system-ui, sans-serif; */
+    font-size: .7rem;
+  }
+  
+  .input-container input[type="text"]:focus ~ .label,
+  .input-container input[type="text"]:valid ~ .label {
+    top: -20px;
+    color: var(--text-clr);
+    border: none;
+    opacity: 1;
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--text-clr);
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+  .input-container input[type="text"]:focus ~ .underline,
+  .input-container input[type="text"]:valid ~ .underline {
+    transform: scaleX(1);
+  }
+ 
+  .input-container input[type="text"]:focus,
+  .input-container input[type="text"]:active {
+    outline: none;
+    border: none;
+ }
+ 
+  .submit {
+    /* font-family: var(--times-new-font); */
+    font-style: italic;
+    border: none;
+    background-color: transparent;
+    color: var(--text-clr);
+    font-size: 1rem;
+    cursor: pointer;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin-bottom: 2rem;
+    transition: all ease 1s;
+ }
+ 
+ .submit:hover {
+    color: var(--text-clr);
+    font-size: 1.2rem;
+ }
+
+/* +++++++++++++ */
+/* Sticky Footer */
+/* +++++++++++++ */
+
+.sticky-footer {
+    display: flex;
+    border-top: 1px solid var(--text-clr);
+    position: sticky;
+    bottom: 0;
+    background-color: var(--background-clr);
+    z-index: 0;
+    font-family: var(--studio-font);
+    font-style: italic;
+    font-size: 0.8rem;
+ }
+
+ .available-wrapper {
+    margin-right: auto;
+    margin-left: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+ }
+
+ .time-wrapper {
+    margin-left: auto;
+    margin-right: 8px;
+ }
+
+.time-text {
+    color: var(--text-clr);
+}
+
+.available-text {
+    color: var(--text-clr);
+}
