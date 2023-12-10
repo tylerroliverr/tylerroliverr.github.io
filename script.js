@@ -77,10 +77,10 @@ Draggable.create(".gif", {
     inertia: true
 });
 
-Draggable.create(".hero-star-svg", {
-    zIndexBoost: false,
-    inertia: true
-});
+// Draggable.create(".hero-star-svg", {
+//     zIndexBoost: false,
+//     inertia: true
+// });
 
 Draggable.create(".draggable-info", {
     zIndexBoost: false,
@@ -89,7 +89,7 @@ Draggable.create(".draggable-info", {
 
 const tl = gsap.timeline();
 
-tl.to(".hero-star-svg", {
+gsap.to(".hero-star-svg", {
     rotation: 360,
     duration: 15,
     ease: 'none',

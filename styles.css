@@ -40,7 +40,7 @@ body {
     --background-clr: var(--white-clr);
     --text-clr: var(--black-clr);
 
-    --uni-padding: 30px;
+    --uni-padding: 20px;
 }
 
 .darkMode {
@@ -153,7 +153,7 @@ a {
 }
 
 .profile-name {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     margin: auto;
 }
 
@@ -183,7 +183,7 @@ a {
 
 .profile-pic {
     width: 220px;
-    border-radius: 0;
+    border-radius: 10px;
     display: block;
     position: relative;
     z-index: -1;
@@ -222,7 +222,7 @@ a {
  .gif {
     width: 120px;
     height: fit-content;
-    border-radius: 100%;
+    border-radius: 10px;
  }
 
 /* +++++++++++++ */
@@ -255,6 +255,7 @@ a {
     font-family: var(--studio-font);
     color: var(--text-clr);
     font-weight: 500;
+    font-size: 1.3rem;
 }
 
 form {
