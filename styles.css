@@ -23,7 +23,7 @@ body {
     -ms-transition: color 0.4s ease, background-color 0.4s ease;
     -webkit-transition: color 0.4s ease, background-color 0.4s ease;
     background-color: var(--background-clr);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* +++++++++++++++++++++++ */
@@ -39,6 +39,7 @@ body {
 
     --background-clr: var(--white-clr);
     --text-clr: var(--black-clr);
+    --loader-clr: var(--black-clr);
 
     --uni-padding: 20px;
 }
@@ -47,11 +48,47 @@ body {
     --background-clr: var(--black-clr);
     --text-clr: var(--white-clr);
     --accent-clr: var(--white-clr);
+    --loader-clr: var(--white-clr);
 }
 
 a {
     all: unset;
     cursor: cursor !important;
+}
+
+/* ++++++ */
+/* Loader */
+/* ++++++ */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    display: flex;
+    pointer-events: none;
+}
+
+.bar {
+    position: relative;
+    width: 10vw;
+    height: 105vh;
+    background-color: var(--loader-clr);
+}
+
+.counter {
+    position: fixed;
+    width: 102%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    color: var(--background-clr);
+    font-size: 1rem;
+    font-family: system-ui, sans-serif;
+    pointer-events: none;
 }
 
 /* +++++++++++++ */
@@ -85,9 +122,15 @@ a {
 /* +++++++++++++ */
 
 .header {
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 100; */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+h1 {
+    margin: 0;
 }
 
 .logo {
@@ -119,10 +162,12 @@ a {
     width: 200px;
     height: 200px;
     filter: blur(0.3rem);
+    margin-bottom: 120px;
+    margin-left: 8px;
 }
 
 .hero-star {
-    height: 80vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,9 +190,10 @@ a {
 
 .profile-wrapper {
     display: flex;
-    height: 50vh;
+    height: 70vh;
     flex-direction: column;
     padding: 0 var(--uni-padding) var(--uni-padding) var(--uni-padding);
+    padding-bottom: 100px;
 }
 
 .profile-name {
@@ -334,7 +380,6 @@ form {
  
   .submit {
     /* font-family: var(--times-new-font); */
-    font-style: italic;
     border: none;
     background-color: transparent;
     color: var(--text-clr);
@@ -343,15 +388,46 @@ form {
     margin: auto;
     display: flex;
     justify-content: center;
-    width: 40%;
-    margin-bottom: 2rem;
+    width: 30%;
+    margin-bottom: 3rem;
     transition: all ease 1s;
+    padding: 6px;
+    border: solid 1px var(--text-clr);
+    border-radius: 100px;
  }
  
  .submit:hover {
     color: var(--text-clr);
     font-size: 1.2rem;
  }
+
+/* +++++++++++ */
+/* Acknowledge */
+/* +++++++++++ */
+
+.ack {
+    color: var(--text-clr);
+    padding: var(--uni-padding);
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    font-size: 0.7rem;
+    position: relative;
+}
+
+.ack-text {
+    margin-bottom: 10px;
+}
+
+.blur-ack {
+    background-color: var(--accent-clr);
+    filter: blur(60px);
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 /* +++++++++++++ */
 /* Sticky Footer */

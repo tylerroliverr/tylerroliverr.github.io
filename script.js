@@ -1,3 +1,32 @@
+/////////////
+//LOADING BAR
+/////////////
+function startLoader() {
+    let counterElement = document.querySelector(".counter");
+    let currentValue = 0;
+
+    function updateCounter() {
+        if(currentValue === 100) {
+            return;
+        }
+
+        currentValue += Math.floor(Math.random() * 10) + 1;
+
+        if(currentValue > 100) {
+            currentValue = 100;
+        }
+
+        counterElement.textContent = currentValue + "%";
+
+        let delay = Math.floor(Math.random() * 180) + 50;
+        setTimeout(updateCounter, delay);
+    }
+
+    updateCounter();
+}
+
+startLoader();
+
 ///////////
 //DARK MODE
 ///////////
@@ -64,6 +93,25 @@ document.addEventListener('DOMContentLoaded', function () {
 /////////////////
 gsap.registerPlugin(ScrollTrigger, Draggable); //Add InertiaPlugin
 
+const splitTypes = document.querySelectorAll('.reveal-type')
+
+splitTypes.forEach((char,i) => {
+
+    const text = new SplitType(char, { types: 'chars'})
+
+    gsap.from(text.chars, {
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 80%',
+            end: 'top 50%',
+            scrub: true,
+            markers: true
+        },
+        opacity: 0.2,
+        stagger: 0.1
+      });
+})
+
 Draggable.create(".drag", {
     // type: "rotation", TO MAKE IT SPIN & NOT DRAG
     bounds: ".drag-container",
@@ -94,15 +142,46 @@ gsap.to(".hero-star-svg", {
     duration: 15,
     ease: 'none',
     repeat: -1
-})
+});
 
 gsap.to(".blur", {
-    scale: 1.1,
-    duration: 2,
+    scale: 1.3,
+    duration: 2.5,
     repeat: -1,
     yoyo: true,
     ease: "none"
-})
+});
+
+gsap.to(".counter", 0.25, {
+    delay: 3.5,
+    opacity: 0,
+});
+
+gsap.to(".bar", 1.5, {
+    delay: 3.5,
+    height: 0,
+    stagger: {
+        amount: 0.3,
+    },
+    ease: "power4.inOut",
+});
+
+gsap.from(".logo", 1.5, {
+    delay: 4,
+    opacity: 0,
+    y: 600,
+    stagger: {
+        amount: 0.2,
+    },
+    ease: "power4.inOut",
+});
+
+gsap.from(".hero-star", 2, {
+    delay: 4.5,
+    opacity: 0,
+    y: 600,
+    ease: "power4.inOut",
+});
 
 // tl.to("#custom-cursor", {
 //     duration: 15,
