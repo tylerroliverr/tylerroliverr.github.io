@@ -16,7 +16,7 @@ function startLoader() {
             currentValue = 100;
         }
 
-        counterElement.textContent = currentValue + "%";
+        counterElement.textContent = "[" + currentValue + "]" + "%";
 
         let delay = Math.floor(Math.random() * 180) + 50;
         setTimeout(updateCounter, delay);
@@ -32,15 +32,19 @@ startLoader();
 ///////////
 let darkMode = localStorage.getItem('darkMode');
 const darkModeToggle = document.querySelector('#toggle');
+const dayText = '<span class="cursive smaller">D</span>ay';
+const nightText = '<span class="cursive smaller">N</span> ight';
 
 const enableDarkMode = () => {
     document.body.classList.add('darkMode');
     localStorage.setItem('darkMode', 'enabled');
+    darkModeToggle.innerHTML = dayText;
 }
 
 const disableDarkMode = () => {
     document.body.classList.remove('darkMode');
     localStorage.setItem('darkMode', null);
+    darkModeToggle.innerHTML = nightText;
 }
 
 if (darkMode === 'enabled') {
@@ -55,7 +59,7 @@ darkModeToggle.addEventListener('click', () => {
         disableDarkMode();
     }
     // setTimeout(function () {
-    //     darkModeToggle.innerHTML = '<3';
+    //     darkModeToggle.innerHTML = '-|+';
     // }, 0);
 });
 
@@ -93,7 +97,9 @@ document.addEventListener('DOMContentLoaded', function () {
 /////////////////
 gsap.registerPlugin(ScrollTrigger, Draggable); //Add InertiaPlugin
 
-const splitTypes = document.querySelectorAll('.reveal-type')
+ScrollTrigger.refresh();
+
+const splitTypes = document.querySelectorAll('.reveal-type');
 
 splitTypes.forEach((char,i) => {
 
@@ -101,14 +107,14 @@ splitTypes.forEach((char,i) => {
 
     gsap.from(text.chars, {
         scrollTrigger: {
-            trigger: char,
-            start: 'top 80%',
-            end: 'top 50%',
+            trigger: ".services-list",
+            start: 'top 60%',
+            end: '50% 50%',
             scrub: true,
-            markers: true
+            // markers: true
         },
         opacity: 0.2,
-        stagger: 0.1
+        stagger: 0.2
       });
 })
 
@@ -119,110 +125,149 @@ Draggable.create(".drag", {
     inertia: true
 });
 
-Draggable.create(".gif", {
-    bounds: ".gif-wrapper",
-    zIndexBoost: false,
-    inertia: true
-});
-
-// Draggable.create(".hero-star-svg", {
+// Draggable.create(".cssload-wrap", {
+//     // type: "rotation", TO MAKE IT SPIN & NOT DRAG
+//     bounds: ".drag-container",
 //     zIndexBoost: false,
 //     inertia: true
 // });
 
-Draggable.create(".draggable-info", {
-    zIndexBoost: false,
-    inertia: true
-});
-
 const tl = gsap.timeline();
 
-gsap.to(".hero-star-svg", {
+gsap.to(".star", {
     rotation: 360,
     duration: 15,
     ease: 'none',
     repeat: -1
 });
 
-gsap.to(".blur", {
-    scale: 1.3,
+gsap.to(".small-stars-svg", {
+    rotation: 360,
+    duration: 15,
+    ease: 'none',
+    repeat: -1
+});
+
+gsap.to(".blur-ack", {
+    scale: 0.7,
     duration: 2.5,
     repeat: -1,
     yoyo: true,
-    ease: "none"
+    ease: "power1.in"
 });
+
+///////////////////////////////////////////START LOADER
 
 gsap.to(".counter", 0.25, {
-    delay: 3.5,
+    delay: 3,
     opacity: 0,
 });
 
-gsap.to(".bar", 1.5, {
-    delay: 3.5,
-    height: 0,
-    stagger: {
-        amount: 0.3,
+gsap.to(".bar", 1.2, {
+    delay: 3.25,
+    // opacity: 0,
+    yPercent: -100,
+    ease: "power4.out",
+});
+
+//////////////////////////////////////////////END LOADER
+
+///////////////////////
+
+let secondsT = 1.6;
+
+gsap.from(".studios-wrapper", {
+    scrollTrigger: {
+        trigger: ".after-title",
+        // markers: true,
+        // scrub: true,
+        start: "30% 50%",
+        end: "bottom 50%",
+        toggleActions: "play none none none",
     },
-    ease: "power4.inOut",
+    opacity: 0,
+    duration: secondsT
 });
 
-gsap.from(".logo", 1.5, {
-    delay: 4,
-    opacity: 0,
-    y: 600,
-    stagger: {
-        amount: 0.2,
+gsap.from(".profile-wrapper", {
+    scrollTrigger: {
+        trigger: ".after-title",
+        // markers: true,
+        // scrub: true,
+        start: "50% 50%",
+        end: "bottom 30%",
+        toggleActions: "play none none none",
     },
-    ease: "power4.inOut",
-});
-
-gsap.from(".hero-star", 2, {
-    delay: 4.5,
     opacity: 0,
-    y: 600,
-    ease: "power4.inOut",
+    duration: secondsT
 });
 
-// tl.to("#custom-cursor", {
-//     duration: 15,
-//     scale: 2,
-//     ease: 'none',
-//     yoyo: true,
-//     repeat: -1
-// })
+gsap.from(".before-about", {
+    scrollTrigger: {
+        trigger: ".profile-wrapper",
+        // markers: true,
+        // scrub: true,
+        start: "40% 50%",
+        end: "80% 40%",
+        toggleActions: "play none none none",
+    },
+    opacity: 0,
+    duration: secondsT
+});
 
-// tl.from(".hero-black", {
-//     scrollTrigger: {
-//         trigger: ".hero-black",
-//         start: "top center",
-//         end: "center center",
-//         toggleActions: "play reverse none none",
-//         scrub: 2
-//     },
-//     borderRadius: 200,
-//     duration: 2
-// })
-// .from(".hero-black", {
-//     scrollTrigger: {
-//         trigger: ".hero-black",
-//         start: "top bottom",
-//         end: "center 80%",
-//         scrub: 2
-//     },
-//     x: '100vw',
-//     duration: 2
-// })
-// .from(".profile-photo", {
-//     scrollTrigger: {
-//         trigger: '.hero-black',
-//         end: "40% center",
-//         scrub: 2,
-//         markers: true
-//     },
-//     x: '100vw',
-//     opacity: 0,
-//     duration: 2
-// })
+gsap.from(".about-me", {
+    scrollTrigger: {
+        trigger: ".before-about",
+        // markers: true,
+        // scrub: true,
+        start: "top 50%",
+        end: "80% 40%",
+        toggleActions: "play none none none",
+    },
+    opacity: 0,
+    duration: secondsT
+});
+
+gsap.from(".services-title", {
+    scrollTrigger: {
+        trigger: ".about-me",
+        // markers: true,
+        // scrub: true,
+        start: "top 50%",
+        end: "80% 40%",
+        toggleActions: "play none none none",
+    },
+    opacity: 0,
+    duration: secondsT
+});
+
+gsap.from(".contact", {
+    scrollTrigger: {
+        trigger: ".drag-container",
+        // markers: true,
+        // scrub: true,
+        start: "top 50%",
+        end: "80% 40%",
+        toggleActions: "play none none none",
+    },
+    opacity: 0,
+    duration: secondsT
+});
+
+gsap.from(".cssload-wrap", {
+    scrollTrigger: {
+        trigger: ".services-list",
+        // markers: true,
+        // scrub: true,
+        start: "30% 50%",
+        end: "bottom 50%",
+        toggleActions: "play none none none",
+    },
+    opacity: 0,
+    duration: secondsT
+});
+
+ScrollTrigger.refresh();
 
 //////////////////
 //SMOOTH SCROLLING

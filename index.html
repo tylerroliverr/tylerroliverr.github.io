@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Creative Web Developer and Designer based in Melbourne (Naarm). I create stunning, yet simple and exceptional websites! Are you a small business or creative looking for a website to showcase your brand?">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./resources/images/star-fill-blue.svg">
     <title>BLUEROOM Studios</title>
 </head>
 <body>
@@ -19,17 +19,20 @@
 
     <div class="overlay">
         <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
     </div>
     <p class="counter">0%</p>
+
+    <!-- <div class="scroll-wrapper">
+        <div class="scroll-text">
+            <p>scroll
+                <br>
+                <br>
+                ⌵
+            </p>
+        </div>
+    </div> -->
+
+    <div class="big-hero"></div>
 
     <div class="header">
         <h1 class="logo">B</h1>
@@ -42,92 +45,171 @@
         <h1 class="logo">M</h1>
     </div>
 
-    <div class="hero-star">
-        <svg class="hero-star-svg" width="2993" height="2849" viewBox="0 0 2993 2849" fill="var(--accent-clr)" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1467.97 20.8114C1476.95 -6.82797 1516.05 -6.8278 1525.03 20.8115L1857.63 1044.45C1861.65 1056.81 1873.17 1065.18 1886.16 1065.18H2962.48C2991.54 1065.18 3003.62 1102.36 2980.11 1119.45L2109.35 1752.09C2098.84 1759.73 2094.44 1773.27 2098.46 1785.63L2431.05 2809.26C2440.04 2836.9 2408.4 2859.89 2384.89 2842.8L1514.13 2210.16C1503.62 2202.52 1489.38 2202.52 1478.87 2210.16L608.111 2842.8C584.599 2859.89 552.965 2836.9 561.946 2809.26L894.545 1785.63C898.561 1773.27 894.161 1759.73 883.646 1752.09L12.8908 1119.45C-10.6206 1102.36 1.46266 1065.18 30.5244 1065.18H1106.84C1119.83 1065.18 1131.35 1056.81 1135.37 1044.45L1467.97 20.8114Z"/>
+    <div class="sub-header">
+        <p class="sub-text">
+            <span class="cursive">S </span>
+            <span class="non-cursive">tudios</span>
+        </p>
+        <svg class="star" viewBox="0 0 321 326" fill="var(--white-clr)" xmlns="http://www.w3.org/2000/svg">
+            <path id="Star 7" d="M195.355 2.092C196.689 -0.678323 200.831 0.113026 201.05 3.18009L208.328 105.121C208.459 106.956 210.195 108.242 211.988 107.833L311.627 85.0938C314.625 84.4096 316.589 88.1414 314.327 90.2249L239.164 159.474C237.811 160.721 237.888 162.879 239.326 164.026L319.228 227.75C321.632 229.667 319.939 233.529 316.9 233.06L215.895 217.471C214.077 217.191 212.437 218.597 212.437 220.436L212.434 322.637C212.434 325.712 208.359 326.796 206.831 324.128L156.043 235.44C155.129 233.844 153.007 233.438 151.569 234.585L71.6636 298.304C69.2595 300.221 65.871 297.711 67.0045 294.852L104.678 199.849C105.356 198.139 104.35 196.227 102.557 195.818L2.91916 173.073C-0.0785947 172.389 -0.228783 168.174 2.71266 167.278L100.479 137.499C102.238 136.963 103.105 134.985 102.307 133.328L57.9669 41.2465C56.6329 38.4761 59.8341 35.7311 62.3686 37.4722L146.607 95.3414C148.123 96.3828 150.211 95.8274 151.009 94.1704L195.355 2.092Z"/>
         </svg>
-        <!-- <div class="draggable-info">
-            <p>btw, there's quite a few draggable things ;)</p>
-        </div> -->
+    </div>
+
+    <div class="big after-title"></div>
+
+    <!-- <div class="blur"></div> -->
+
+    <div class="studios-wrapper">
+        <!-- <div class="blur"></div> -->
+        <p class="studios"><span class="cursive small">H</span>ello, I'm Tyler. Founder of BLUEROOM Studios, a creative web design agency based in Melbourne, Naarm. <span class="pop-soft">(Currently open for work)</span></p>
     </div>
 
     <div class="profile-wrapper">
-        <h2 class="profile-name">Hello, I'm Tyler!</h2>
-        <div class="img-wrapper">
-            <div class="blur"></div>
-            <img class="profile-pic" src="./resources/images/Profile-Pic.jpg" alt="">
+        <img class="profile-pic" src="./resources/images/Profile-Pic.jpg" alt="profile picture of tyler">
+        <div class="small-stars">
+            <svg class="small-stars-svg" viewBox="0 0 321 326" fill="var(--white-clr)" xmlns="http://www.w3.org/2000/svg">
+                <path id="Star 7" d="M195.355 2.092C196.689 -0.678323 200.831 0.113026 201.05 3.18009L208.328 105.121C208.459 106.956 210.195 108.242 211.988 107.833L311.627 85.0938C314.625 84.4096 316.589 88.1414 314.327 90.2249L239.164 159.474C237.811 160.721 237.888 162.879 239.326 164.026L319.228 227.75C321.632 229.667 319.939 233.529 316.9 233.06L215.895 217.471C214.077 217.191 212.437 218.597 212.437 220.436L212.434 322.637C212.434 325.712 208.359 326.796 206.831 324.128L156.043 235.44C155.129 233.844 153.007 233.438 151.569 234.585L71.6636 298.304C69.2595 300.221 65.871 297.711 67.0045 294.852L104.678 199.849C105.356 198.139 104.35 196.227 102.557 195.818L2.91916 173.073C-0.0785947 172.389 -0.228783 168.174 2.71266 167.278L100.479 137.499C102.238 136.963 103.105 134.985 102.307 133.328L57.9669 41.2465C56.6329 38.4761 59.8341 35.7311 62.3686 37.4722L146.607 95.3414C148.123 96.3828 150.211 95.8274 151.009 94.1704L195.355 2.092Z"/>
+            </svg>
+            <svg class="small-stars-svg" viewBox="0 0 321 326" fill="var(--white-clr)" xmlns="http://www.w3.org/2000/svg">
+                <path id="Star 7" d="M195.355 2.092C196.689 -0.678323 200.831 0.113026 201.05 3.18009L208.328 105.121C208.459 106.956 210.195 108.242 211.988 107.833L311.627 85.0938C314.625 84.4096 316.589 88.1414 314.327 90.2249L239.164 159.474C237.811 160.721 237.888 162.879 239.326 164.026L319.228 227.75C321.632 229.667 319.939 233.529 316.9 233.06L215.895 217.471C214.077 217.191 212.437 218.597 212.437 220.436L212.434 322.637C212.434 325.712 208.359 326.796 206.831 324.128L156.043 235.44C155.129 233.844 153.007 233.438 151.569 234.585L71.6636 298.304C69.2595 300.221 65.871 297.711 67.0045 294.852L104.678 199.849C105.356 198.139 104.35 196.227 102.557 195.818L2.91916 173.073C-0.0785947 172.389 -0.228783 168.174 2.71266 167.278L100.479 137.499C102.238 136.963 103.105 134.985 102.307 133.328L57.9669 41.2465C56.6329 38.4761 59.8341 35.7311 62.3686 37.4722L146.607 95.3414C148.123 96.3828 150.211 95.8274 151.009 94.1704L195.355 2.092Z"/>
+            </svg>
+            <svg class="small-stars-svg" viewBox="0 0 321 326" fill="var(--white-clr)" xmlns="http://www.w3.org/2000/svg">
+                <path id="Star 7" d="M195.355 2.092C196.689 -0.678323 200.831 0.113026 201.05 3.18009L208.328 105.121C208.459 106.956 210.195 108.242 211.988 107.833L311.627 85.0938C314.625 84.4096 316.589 88.1414 314.327 90.2249L239.164 159.474C237.811 160.721 237.888 162.879 239.326 164.026L319.228 227.75C321.632 229.667 319.939 233.529 316.9 233.06L215.895 217.471C214.077 217.191 212.437 218.597 212.437 220.436L212.434 322.637C212.434 325.712 208.359 326.796 206.831 324.128L156.043 235.44C155.129 233.844 153.007 233.438 151.569 234.585L71.6636 298.304C69.2595 300.221 65.871 297.711 67.0045 294.852L104.678 199.849C105.356 198.139 104.35 196.227 102.557 195.818L2.91916 173.073C-0.0785947 172.389 -0.228783 168.174 2.71266 167.278L100.479 137.499C102.238 136.963 103.105 134.985 102.307 133.328L57.9669 41.2465C56.6329 38.4761 59.8341 35.7311 62.3686 37.4722L146.607 95.3414C148.123 96.3828 150.211 95.8274 151.009 94.1704L195.355 2.092Z"/>
+            </svg>
         </div>
+    </div>
+
+    <div class="big before-about">
+        <!-- <img class="gif" src="./resources/images/crazy.gif" alt="">
+        <img class="gif" src="./resources/images/crazy.gif" alt="">
+        <img class="gif" src="./resources/images/crazy.gif" alt=""> -->
+        <p>
+            <span class="cursive">Br<span class="tiny-star">⭑</span>BR<span class="tiny-star">⭑</span>Br<span class="tiny-star">⭑</span>BR<span class="tiny-star">⭑</span>Br<span class="tiny-star">⭑</span>BR<span class="tiny-star">⭑</span>Br<span class="tiny-star">⭑</span>BR<span class="tiny-star">⭑</span>Br<span class="tiny-star">⭑</span>BR<span class="tiny-star">⭑</span>Br<span class="tiny-star">⭑</span>BR<span class="tiny-star">⭑</span>Br<span class="tiny-star">⭑</span>BR<span class="tiny-star">⭑</span>Br<span class="tiny-star">⭑</span>BR</span>
+        </p>
     </div>
 
     <div class="about-me">
-        <p class="reveal-type">In the realm of web design, my journey spans over a decade. I try to bring a unique touch to each project, combining a love ❦ for <span class="pop-soft">soft,</span> <span class="pop-bold">bold,</span> and <span class="pop-minimal">minimal</span> aesthetics.
+        <p>In the realm of web design, my journey spans over a decade. Bringing a unique touch to each project, combining a love ❦ for <span class="pop-soft">soft,</span> <span class="pop-bold">bold,</span> and <span class="pop-minimal">minimal</span> aesthetics.
         <br> <br>
-        I’m not just designing websites. I’m crafting digital experiences that bring those genuine wow moments.</p>
+        More than just designing & building websites. I’m crafting digital experiences that bring those genuine wow moments.</p>
     </div>
 
-    <div class="gif-wrapper">
+    <!-- <div class="gif-wrapper">
         <img class="gif" src="./resources/images/Brain-Explosion.gif" alt="">
+    </div> -->
+
+    <div class="services">
+        <div class="services-title">
+            <p>
+                <span class="cursive">S</span>ervices
+            </p>
+        </div>
+        <div class="services-list">
+            <div class="line"></div>
+            <p class="reveal-type">Web design & animations</p>
+            <div class="line"></div>
+            <p class="reveal-type">Renovations on existing site</p>
+            <div class="line"></div>
+            <p class="reveal-type">Mobile responsive design</p>
+            <div class="line"></div>
+            <p class="reveal-type">Custom code templates</p>
+            <div class="line"></div>
+            <!-- <p><span class="cursive small">T</span>urn your ideas into powerful dynamic websites.</p> -->
+        </div>
     </div>
 
     <div class="drag-container">
-        <svg class="drag" viewBox="0 0 321 326" fill="var(--text-clr)" xmlns="http://www.w3.org/2000/svg">
+        <!-- <svg class="drag" viewBox="0 0 321 326" fill="var(--text-clr)" xmlns="http://www.w3.org/2000/svg">
             <path id="Star 7" d="M195.355 2.092C196.689 -0.678323 200.831 0.113026 201.05 3.18009L208.328 105.121C208.459 106.956 210.195 108.242 211.988 107.833L311.627 85.0938C314.625 84.4096 316.589 88.1414 314.327 90.2249L239.164 159.474C237.811 160.721 237.888 162.879 239.326 164.026L319.228 227.75C321.632 229.667 319.939 233.529 316.9 233.06L215.895 217.471C214.077 217.191 212.437 218.597 212.437 220.436L212.434 322.637C212.434 325.712 208.359 326.796 206.831 324.128L156.043 235.44C155.129 233.844 153.007 233.438 151.569 234.585L71.6636 298.304C69.2595 300.221 65.871 297.711 67.0045 294.852L104.678 199.849C105.356 198.139 104.35 196.227 102.557 195.818L2.91916 173.073C-0.0785947 172.389 -0.228783 168.174 2.71266 167.278L100.479 137.499C102.238 136.963 103.105 134.985 102.307 133.328L57.9669 41.2465C56.6329 38.4761 59.8341 35.7311 62.3686 37.4722L146.607 95.3414C148.123 96.3828 150.211 95.8274 151.009 94.1704L195.355 2.092Z"/>
-        </svg>
-        <p>add some more fun stuff here?</p>
+        </svg> -->
+        <div class="cssload-wrap">
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-circle"></div>
+        </div>
     </div>
 
     <div class="contact">
-        <h3 class="contact-text">Let's Work Together!</h3>
+        <h3 class="contact-text"><span class="cursive">L</span>et's <span class="cursive">W</span>ork <span class="cursive">T</span>ogether</h3>
     </div>
 
-    <form id="2" class="form" target="_blank" action="https://formsubmit.co/a4739d1424cbef363a68c0ee5f2c4fa7" method="POST">
-        <div class="input-container">
-            <input type="text" id="name" name="name" required>
-            <label for="name" class="label">Name</label>
-            <div class="underline"></div>
-        </div>
-
-        <div class="input-container">
-            <input type="text" id="email" name="email" required onfocus="this.placeholder = 'hello@gmail.com'" onblur="this.placeholder =''">
-            <label for="email" class="label">Email</label>
-            <div class="underline"></div>
-        </div>
-
-        <div class="input-container">
-            <input type="text" id="budget" name="budget" required onfocus="this.placeholder = '$2,500'" onblur="this.placeholder =''">
-            <label for="budget" class="label">Budget</label>
-            <div class="underline"></div>
-        </div>
-
-        <div class="input-container">
-            <input type="text" id="service" name="service" required onfocus="this.placeholder = 'Web design, web renovation etc'" onblur="this.placeholder =''">
-            <label for="service" class="label">Service</label>
-            <div class="underline"></div>
-        </div>
-
-        <input type="submit" class="submit" name="submit" value="SEND" />
-
-        <input type="hidden" name="_next" value="http://blueroomstudios.com.au/thankyou.html">
-        <input type="hidden" name="_captcha" value="false">
-    </form>
+    <div class="form-wrapper">
+        <form id="2" class="form" target="_blank" action="https://formsubmit.co/a4739d1424cbef363a68c0ee5f2c4fa7" method="POST">
+            <div class="input-container">
+                <input type="text" id="name" name="name" required>
+                <label for="name" class="label">Name</label>
+                <div class="underline"></div>
+            </div>
+    
+            <div class="input-container">
+                <input type="text" id="email" name="email" required onfocus="this.placeholder = 'hello@gmail.com'" onblur="this.placeholder =''">
+                <label for="email" class="label">Email</label>
+                <div class="underline"></div>
+            </div>
+    
+            <div class="input-container">
+                <input type="text" id="budget" name="budget" required onfocus="this.placeholder = '$2,500'" onblur="this.placeholder =''">
+                <label for="budget" class="label">Budget</label>
+                <div class="underline"></div>
+            </div>
+    
+            <div class="input-container">
+                <input type="text" id="service" name="service" required onfocus="this.placeholder = 'Web design, web renovation etc'" onblur="this.placeholder =''">
+                <label for="service" class="label">Service</label>
+                <div class="underline"></div>
+            </div>
+    
+            <input type="submit" class="submit" name="submit" value="Send" />
+    
+            <input type="hidden" name="_next" value="http://blueroomstudios.com.au/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </div>
 
     <!-- <div class="big"></div> -->
 
     <div class="ack">
         <p class="ack-text">
-            Blueroom wishes to acknowledge the traditional owners of the land on which we operate on, the Wurundjeri people of the Kulin Nation, and pay my respects to their Elders past, present and emerging
+            Blueroom wishes to acknowledge the traditional owners of the land on which we operate on, the Wurundjeri people of the Kulin Nation, and pay my respects to their Elders past, present and emerging.
         </p>
         <div class="blur-ack"></div>
     </div>
 
     <div class="sticky-footer">
         <div class="available-wrapper">
-            <a href="#2" class="available-text">Available for work</a>
+            <a href="#2" class="available-text"><span class="cursive smaller">P</span>rojects</a>
         </div>
 
         <div class="time-wrapper">
            <!-- <p class="time-text"></p> -->
-           <p class="toggle" id="toggle">Swap vibes</p>
+           <p class="toggle" id="toggle"><span class="cursive smaller">N</span> ight</p>
         </div>
      </div>
 
