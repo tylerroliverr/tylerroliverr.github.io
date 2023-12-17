@@ -108,12 +108,12 @@ splitTypes.forEach((char,i) => {
     gsap.from(text.chars, {
         scrollTrigger: {
             trigger: ".services-list",
-            start: 'top 60%',
+            start: 'top 70%',
             end: '50% 50%',
             scrub: true,
             // markers: true
         },
-        opacity: 0.2,
+        opacity: 0.1,
         stagger: 0.2
       });
 })
@@ -148,13 +148,20 @@ gsap.to(".small-stars-svg", {
     repeat: -1
 });
 
-gsap.to(".blur-ack", {
-    scale: 0.7,
-    duration: 2.5,
-    repeat: -1,
-    yoyo: true,
-    ease: "power1.in"
+gsap.to(".two", {
+    rotation: 360,
+    duration: 25,
+    ease: 'none',
+    repeat: -1
 });
+
+// gsap.to(".blur-ack", {
+//     scale: 0.7,
+//     duration: 2.5,
+//     repeat: -1,
+//     yoyo: true,
+//     ease: "power1.in"
+// });
 
 ///////////////////////////////////////////START LOADER
 
@@ -284,3 +291,31 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+//SCROLLING BANNER
+const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller-inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
