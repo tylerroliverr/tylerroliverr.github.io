@@ -72,6 +72,10 @@ p {
     align-items: center;
 }
 
+.link {
+    padding-left: 3px;
+}
+
 a {
     all: unset;
 }
@@ -142,5 +146,10 @@ a {
 
     .phone-hover img {
         width: 100%;
+    }
+
+    p {
+        font-family: var(--studio-font);
+        font-size: 0.65rem;
     }
 }
