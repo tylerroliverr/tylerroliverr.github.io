@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'medieval', boxClass: '.medieval-images' },
         { id: 'flaura', boxClass: '.flaura-images' },
         { id: 'trinkets', boxClass: '.trinkets-images' },
+        { id: 'dirt', boxClass: '.dirt-images' }
         // Add more boxes in the future as needed
     ];
 
@@ -108,7 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var boxes = [
         { id: 'medieval-phone', boxClass: '.medieval-images-phone' },
         { id: 'flaura-phone', boxClass: '.flaura-images-phone' },
-        { id: 'trinkets-phone', boxClass: '.trinkets-images-phone' } 
+        { id: 'trinkets-phone', boxClass: '.trinkets-images-phone' },
+        { id: 'dirt-phone', boxClass: '.dirt-images-phone' }
         // Add more boxes in the future as needed
     ];
 
