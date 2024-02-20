@@ -147,12 +147,8 @@ a {
     display: none;
 }
 
-#medieval {
-    transition: all 1s ease;
-}
-
 .image-hover-wrapper {
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -170,6 +166,7 @@ a {
     height: 78vh;
     position: fixed;
     top: 10vh;
+    right: 0;
 }
 
 .info-text {
@@ -233,6 +230,7 @@ img.thumbnail {
         flex-direction: column;
         gap: 15px;
     }
+
 
     p {
         font-family: var(--studio-font);
