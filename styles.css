@@ -167,6 +167,18 @@ a {
     opacity: 0;
     transition: opacity 1s ease;
     flex-direction: column;
+    height: 78vh;
+    position: fixed;
+    top: 10vh;
+}
+
+.info-text {
+   margin-top: auto;
+   text-align: right;
+}
+
+img.thumbnail {
+   filter: sepia(100%) hue-rotate(190deg) saturate(450%);
 }
 
 /*PHONE*/
