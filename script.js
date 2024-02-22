@@ -17,16 +17,18 @@ function scrollToTop() {
 const phoneCategories = [
     { id: "medieval-phone", path: "./resources/images/1 (17).jfif" },
     { id: "trinkets-phone", path: "./resources/trinkets/trinkets (2).jfif" },
-    { id: "flaura-phone", path: "./resources/flaura/flaura (23).jfif" },
-    { id: "dirt-phone", path: "./resources/dirt/dirt (17).jfif" },
+    { id: "flaura-phone", path: "./resources/flaura/flaura (8).jfif" },
+    { id: "dirt-phone", path: "./resources/dirt/dirt (10).jfif" },
+    { id: "etherial-phone", path: "./resources/etherial/etherial (19).jfif" },
     // Add more phone categories as needed
 ];
 
 const desktopCategories = [
     { id: "medieval", path: "./resources/images/1 (17).jfif" },
     { id: "trinkets", path: "./resources/trinkets/trinkets (2).jfif" },
-    { id: "flaura", path: "./resources/flaura/flaura (23).jfif" },
-    { id: "dirt", path: "./resources/dirt/dirt (17).jfif" },
+    { id: "flaura", path: "./resources/flaura/flaura (8).jfif" },
+    { id: "dirt", path: "./resources/dirt/dirt (10).jfif" },
+    { id: "etherial", path: "./resources/etherial/etherial (19).jfif" },
     // Add more phone categories as needed
 ];
 
@@ -135,7 +137,6 @@ const categories = [
     {
         name: "flaura",
         images: [
-            { path: "./resources/flaura/flaura (1).jfif", text: "unsure" },
             { path: "./resources/flaura/flaura (2).jfif", text: "unsure" },
             { path: "./resources/flaura/flaura (3).jfif", text: "unsure" },
             { path: "./resources/flaura/flaura (4).jfif", text: "unsure" },
@@ -164,7 +165,6 @@ const categories = [
         name: "dirt",
         images: [
             { path: "./resources/dirt/dirt (1).jfif", text: "pu'er, yunnan(?)" },
-            { path: "./resources/dirt/dirt (2).jfif", text: "unsure" },
             { path: "./resources/dirt/dirt (3).jfif", text: "alan cressler" },
             { path: "./resources/dirt/dirt (4).jfif", text: "don alfonso" },
             { path: "./resources/dirt/dirt (5).jfif", text: "unsure" },
@@ -194,6 +194,32 @@ const categories = [
             { path: "./resources/dirt/dirt (29).jfif", text: "unsure" },
             { path: "./resources/dirt/dirt (30).jfif", text: "leo lionni" },
             { path: "./resources/dirt/dirt (31).jfif", text: "ludovich alleaume" },
+        ]
+    },
+    {
+        name: "etherial",
+        images: [
+            { path: "./resources/etherial/etherial (1).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (1).webp", text: "unsure" },
+            { path: "./resources/etherial/etherial (2).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (3).jfif", text: "mark rappaport" },
+            { path: "./resources/etherial/etherial (4).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (5).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (7).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (8).jfif", text: "a date with an angel 1987" },
+            { path: "./resources/etherial/etherial (9).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (10).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (11).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (12).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (13).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (14).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (15).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (16).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (17).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (18).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (19).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (20).jfif", text: "unsure" },
+            { path: "./resources/etherial/etherial (21).jfif", text: "unsure" },
         ]
     },
 ];
@@ -261,10 +287,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     var boxes = [
-        { id: 'medieval', boxClass: '.medieval-images', inactiveImage: './resources/images/1 (17).jfif', activeImage: './resources/blue_thumbnails/armour.png'  },
-        { id: 'flaura', boxClass: '.flaura-images', inactiveImage: './resources/flaura/flaura (23).jfif', activeImage: './resources/blue_thumbnails/flaura.png'  },
-        { id: 'trinkets', boxClass: '.trinkets-images', inactiveImage: './resources/trinkets/trinkets (2).jfif', activeImage: './resources/blue_thumbnails/trinkets.png'  },
-        { id: 'dirt', boxClass: '.dirt-images', inactiveImage: './resources/dirt/dirt (17).jfif', activeImage: './resources/blue_thumbnails/dirt.png' }
+        { id: 'medieval', boxClass: '.medieval-images', inactiveImage: './resources/images/1 (17).jfif', activeImage: './resources/blue_thumbnails/armour.jfif'  },
+        { id: 'flaura', boxClass: '.flaura-images', inactiveImage: './resources/flaura/flaura (8).jfif', activeImage: './resources/blue_thumbnails/flaura.webp'  },
+        { id: 'trinkets', boxClass: '.trinkets-images', inactiveImage: './resources/trinkets/trinkets (2).jfif', activeImage: './resources/blue_thumbnails/trinkets.jfif'  },
+        { id: 'dirt', boxClass: '.dirt-images', inactiveImage: './resources/dirt/dirt (10).jfif', activeImage: './resources/blue_thumbnails/dirt.webp' },
+        { id: 'etherial', boxClass: '.etherial-images', inactiveImage: './resources/etherial/etherial (19).jfif', activeImage: './resources/blue_thumbnails/etherial.webp' },
         // Add more boxes in the future as needed
     ];
 
@@ -346,10 +373,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     var boxes = [
-        { id: 'medieval-phone', boxClass: '.medieval-images-phone', inactiveImage: './resources/images/1 (17).jfif', activeImage: './resources/blue_thumbnails/armour.png'  },
-        { id: 'flaura-phone', boxClass: '.flaura-images-phone', inactiveImage: './resources/flaura/flaura (23).jfif', activeImage: './resources/blue_thumbnails/flaura.png'  },
-        { id: 'trinkets-phone', boxClass: '.trinkets-images-phone', inactiveImage: './resources/trinkets/trinkets (2).jfif', activeImage: './resources/blue_thumbnails/trinkets.png'  },
-        { id: 'dirt-phone', boxClass: '.dirt-images-phone', inactiveImage: './resources/dirt/dirt (17).jfif', activeImage: './resources/blue_thumbnails/dirt.png' }
+        { id: 'medieval-phone', boxClass: '.medieval-images-phone', inactiveImage: './resources/images/1 (17).jfif', activeImage: './resources/blue_thumbnails/armour.jfif'  },
+        { id: 'flaura-phone', boxClass: '.flaura-images-phone', inactiveImage: './resources/flaura/flaura (8).jfif', activeImage: './resources/blue_thumbnails/flaura.webp'  },
+        { id: 'trinkets-phone', boxClass: '.trinkets-images-phone', inactiveImage: './resources/trinkets/trinkets (2).jfif', activeImage: './resources/blue_thumbnails/trinkets.jfif'  },
+        { id: 'dirt-phone', boxClass: '.dirt-images-phone', inactiveImage: './resources/dirt/dirt (10).jfif', activeImage: './resources/blue_thumbnails/dirt.webp' },
+        { id: 'etherial-phone', boxClass: '.etherial-images-phone', inactiveImage: './resources/etherial/etherial (19).jfif', activeImage: './resources/blue_thumbnails/etherial.webp' },
         // Add more boxes in the future as needed
     ];
 
