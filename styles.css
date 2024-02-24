@@ -39,8 +39,8 @@ body {
     z-index: 2;
     mix-blend-mode: difference;
 }
- 
- #custom-cursor {
+
+#custom-cursor {
     position: absolute;
     width: 15px;
     height: 15px;
@@ -170,8 +170,8 @@ a {
 }
 
 .info-text {
-   margin-top: auto;
-   text-align: right;
+    margin-top: auto;
+    text-align: right;
 }
 
 .thumbnail {

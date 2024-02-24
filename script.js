@@ -1,8 +1,8 @@
 const lenis = new Lenis();
 
 function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
+    lenis.raf(time);
+    requestAnimationFrame(raf);
 }
 
 requestAnimationFrame(raf);
@@ -257,7 +257,7 @@ function initializeImages() {
         const phoneHover = document.querySelector(`.phone-hover.${category.name}-images-phone`);
         phoneHover.innerHTML = generateImageHTML(category);
     });
-    
+
 }
 
 // Call the initialization function
@@ -266,7 +266,7 @@ initializeImages();
 //////////////////////////////////////////////////////////////
 
 //////Opacity on Load
-window.onload = function() {
+window.onload = function () {
     var element = document.querySelector(".body");
     element.style.opacity = 1;
 };
@@ -274,26 +274,37 @@ window.onload = function() {
 ///////////////////////////////////////////////////////////////
 
 /////Desktop EventListeners
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var infoButton = document.querySelector('.info');
     var infoElement = document.querySelector('.information');
 
-    infoButton.addEventListener('click', function() {
+    infoButton.addEventListener('click', function () {
         infoElement.style.display = 'flex';
-        setTimeout(function() {
+        setTimeout(function () {
             infoElement.style.opacity = 1;
         }, 50);
         closeAllBoxes();
     });
 
     var boxes = [
-        { id: 'medieval', boxClass: '.medieval-images', inactiveImage: './resources/images/1 (17).jfif', activeImage: './resources/blue_thumbnails/armour.jfif'  },
-        { id: 'flaura', boxClass: '.flaura-images', inactiveImage: './resources/flaura/flaura (8).jfif', activeImage: './resources/blue_thumbnails/flaura.webp'  },
-        { id: 'trinkets', boxClass: '.trinkets-images', inactiveImage: './resources/trinkets/trinkets (2).jfif', activeImage: './resources/blue_thumbnails/trinkets.jfif'  },
+        { id: 'medieval', boxClass: '.medieval-images', inactiveImage: './resources/images/1 (17).jfif', activeImage: './resources/blue_thumbnails/armour.jfif' },
+        { id: 'flaura', boxClass: '.flaura-images', inactiveImage: './resources/flaura/flaura (8).jfif', activeImage: './resources/blue_thumbnails/flaura.webp' },
+        { id: 'trinkets', boxClass: '.trinkets-images', inactiveImage: './resources/trinkets/trinkets (2).jfif', activeImage: './resources/blue_thumbnails/trinkets.jfif' },
         { id: 'dirt', boxClass: '.dirt-images', inactiveImage: './resources/dirt/dirt (10).jfif', activeImage: './resources/blue_thumbnails/dirt.webp' },
         { id: 'etherial', boxClass: '.etherial-images', inactiveImage: './resources/etherial/etherial (19).jfif', activeImage: './resources/blue_thumbnails/etherial.webp' },
         // Add more boxes in the future as needed
     ];
+
+    //PRELOADING THUMBNAILS
+    const preloadedImages = {};
+    boxes.forEach(function (box) {
+        var activeImage = new Image();
+        activeImage.src = box.activeImage;
+
+        activeImage.onload = function () {
+            preloadedImages[box.id] = activeImage;
+        };
+    });
 
     function toggleBox(box) {
         var trigger = document.getElementById(box.id);
@@ -304,11 +315,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close infoElement before opening the selected box
         infoElement.style.display = 'none';
 
-        boxes.forEach(function(box) {
-            var activeImage = new Image();
-            activeImage.src = box.activeImage;
-        });
-
         if (boxElement.style.display === 'none') {
             // If the box is not active, show it
             closeAllBoxes();
@@ -316,8 +322,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             trigger.src = box.activeImage;
 
-            setTimeout(function() {
-                Array.from(imageBox).forEach(function(imageBoxs) {
+            setTimeout(function () {
+                Array.from(imageBox).forEach(function (imageBoxs) {
                     imageBoxs.style.opacity = 1;
                     scrollToTop();
                 });
@@ -325,20 +331,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         } else {
             // If the box is already active, close it
-            setTimeout(function() {
+            setTimeout(function () {
                 boxElement.style.display = 'none';
             }, 1000);
 
             trigger.src = box.inactiveImage;
 
-            Array.from(imageBox).forEach(function(imageBoxs) {
+            Array.from(imageBox).forEach(function (imageBoxs) {
                 imageBoxs.style.opacity = 0;
             });
         }
     }
 
     function closeAllBoxes() {
-        boxes.forEach(function(box) {
+        boxes.forEach(function (box) {
             var trigger = document.getElementById(box.id);
             var boxElement = document.querySelector(box.boxClass);
 
@@ -346,16 +352,16 @@ document.addEventListener('DOMContentLoaded', function() {
             trigger.src = box.inactiveImage;
 
             var imageBox = boxElement.querySelectorAll('.image-box');
-            Array.from(imageBox).forEach(function(imageBoxs) {
+            Array.from(imageBox).forEach(function (imageBoxs) {
                 imageBoxs.style.opacity = 0;
             });
         });
     }
 
-    boxes.forEach(function(box) {
+    boxes.forEach(function (box) {
         var trigger = document.getElementById(box.id);
 
-        trigger.addEventListener('click', function(e) {
+        trigger.addEventListener('click', function (e) {
             e.stopPropagation();
             toggleBox(box);
         });
@@ -365,27 +371,38 @@ document.addEventListener('DOMContentLoaded', function() {
 ///////////////////////////////////////////////////////////////
 
 /////Phone EventListeners
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     var infoButton = document.querySelector('.info');
     var infoElement = document.querySelector('.information');
 
-    infoButton.addEventListener('click', function() {
+    infoButton.addEventListener('click', function () {
         infoElement.style.display = 'flex';
-        setTimeout(function() {
+        setTimeout(function () {
             infoElement.style.opacity = 1;
         }, 500);
         closeAllBoxes();
     });
 
     var boxes = [
-        { id: 'medieval-phone', boxClass: '.medieval-images-phone', inactiveImage: './resources/images/1 (17).jfif', activeImage: './resources/blue_thumbnails/armour.jfif'  },
-        { id: 'flaura-phone', boxClass: '.flaura-images-phone', inactiveImage: './resources/flaura/flaura (8).jfif', activeImage: './resources/blue_thumbnails/flaura.webp'  },
-        { id: 'trinkets-phone', boxClass: '.trinkets-images-phone', inactiveImage: './resources/trinkets/trinkets (2).jfif', activeImage: './resources/blue_thumbnails/trinkets.jfif'  },
+        { id: 'medieval-phone', boxClass: '.medieval-images-phone', inactiveImage: './resources/images/1 (17).jfif', activeImage: './resources/blue_thumbnails/armour.jfif' },
+        { id: 'flaura-phone', boxClass: '.flaura-images-phone', inactiveImage: './resources/flaura/flaura (8).jfif', activeImage: './resources/blue_thumbnails/flaura.webp' },
+        { id: 'trinkets-phone', boxClass: '.trinkets-images-phone', inactiveImage: './resources/trinkets/trinkets (2).jfif', activeImage: './resources/blue_thumbnails/trinkets.jfif' },
         { id: 'dirt-phone', boxClass: '.dirt-images-phone', inactiveImage: './resources/dirt/dirt (10).jfif', activeImage: './resources/blue_thumbnails/dirt.webp' },
         { id: 'etherial-phone', boxClass: '.etherial-images-phone', inactiveImage: './resources/etherial/etherial (19).jfif', activeImage: './resources/blue_thumbnails/etherial.webp' },
         // Add more boxes in the future as needed
     ];
+
+    //PRELOADING THUMBNAILS
+    const preloadedImages = {};
+    boxes.forEach(function (box) {
+        var activeImage = new Image();
+        activeImage.src = box.activeImage;
+
+        activeImage.onload = function () {
+            preloadedImages[box.id] = activeImage;
+        };
+    });
 
     function toggleBox(box) {
         var trigger = document.getElementById(box.id);
@@ -401,8 +418,8 @@ document.addEventListener('DOMContentLoaded', function() {
             boxElement.style.display = 'flex';
             trigger.src = box.activeImage;
 
-            setTimeout(function() {
-                Array.from(imageBox).forEach(function(imageBoxs) {
+            setTimeout(function () {
+                Array.from(imageBox).forEach(function (imageBoxs) {
                     imageBoxs.style.opacity = 1;
                     scrollToTop();
                 });
@@ -410,20 +427,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         } else {
             // If the box is already active, close it
-            setTimeout(function() {
+            setTimeout(function () {
                 boxElement.style.display = 'none';
             }, 1000);
 
             trigger.src = box.inactiveImage;
 
-            Array.from(imageBox).forEach(function(imageBoxs) {
+            Array.from(imageBox).forEach(function (imageBoxs) {
                 imageBoxs.style.opacity = 0;
             });
         }
     }
 
     function closeAllBoxes() {
-        boxes.forEach(function(box) {
+        boxes.forEach(function (box) {
             var trigger = document.getElementById(box.id);
             var boxElement = document.querySelector(box.boxClass);
 
@@ -431,16 +448,16 @@ document.addEventListener('DOMContentLoaded', function() {
             trigger.src = box.inactiveImage;
 
             var imageBox = boxElement.querySelectorAll('.image-box');
-            Array.from(imageBox).forEach(function(imageBoxs) {
+            Array.from(imageBox).forEach(function (imageBoxs) {
                 imageBoxs.style.opacity = 0;
             });
         });
     }
 
-    boxes.forEach(function(box) {
+    boxes.forEach(function (box) {
         var trigger = document.getElementById(box.id);
 
-        trigger.addEventListener('click', function(e) {
+        trigger.addEventListener('click', function (e) {
             e.stopPropagation();
             toggleBox(box);
         });
