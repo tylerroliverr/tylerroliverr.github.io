@@ -299,9 +299,15 @@ document.addEventListener('DOMContentLoaded', function() {
         var trigger = document.getElementById(box.id);
         var boxElement = document.querySelector(box.boxClass);
         var imageBox = boxElement.querySelectorAll('.image-box');
+        var thumbnail = document.querySelector('.thumbnail');
 
         // Close infoElement before opening the selected box
         infoElement.style.display = 'none';
+
+        boxes.forEach(function(box) {
+            var activeImage = new Image();
+            activeImage.src = box.activeImage;
+        });
 
         if (boxElement.style.display === 'none') {
             // If the box is not active, show it
@@ -368,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
         infoElement.style.display = 'flex';
         setTimeout(function() {
             infoElement.style.opacity = 1;
-        }, 50);
+        }, 500);
         closeAllBoxes();
     });
 
@@ -387,6 +393,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var imageBox = boxElement.querySelectorAll('.image-box');
 
         infoElement.style.display = 'none';
+        infoElement.style.opacity = 0;
 
         if (boxElement.style.display === 'none') {
             // If the box is not active, show it

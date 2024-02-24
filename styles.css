@@ -71,7 +71,7 @@ p {
 .title {
     position: fixed;
     top: 0px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: var(--white-clr);
     z-index: 1;
     width: 100%;
@@ -135,7 +135,7 @@ a {
     display: flex;
     flex-direction: column;
     opacity: 0;
-    transition: all 1s ease;
+    transition: all 1.5s ease-out;
 }
 
 .image-box p {
@@ -161,7 +161,7 @@ a {
     padding: 40px 20px;
     display: none;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: all 1.5s ease-out;
     flex-direction: column;
     height: 78vh;
     position: fixed;
@@ -174,12 +174,21 @@ a {
    text-align: right;
 }
 
-img.thumbnail {
-   filter: sepia(100%) hue-rotate(190deg) saturate(450%);
+.thumbnail {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.hidden {
+    display: none;
 }
 
 /*PHONE*/
 @media screen and (max-width: 699px) {
+
 
     .images-section {
         display: none;
@@ -225,10 +234,10 @@ img.thumbnail {
 
     .phone-hover {
         display: flex;
-        padding-left: 95px;
+        padding-left: 93.5px;
         justify-content: end;
         flex-direction: column;
-        gap: 15px;
+        gap: 3px;
     }
 
 
