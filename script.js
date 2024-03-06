@@ -17,20 +17,22 @@ function scrollToTop() {
 const phoneCategories = [
     { id: "medieval-phone", path: "./resources/images/1 (17).jfif" },
     { id: "trinkets-phone", path: "./resources/trinkets/trinkets (2).jfif" },
-    { id: "flaura-phone", path: "./resources/flaura/flaura (8).jfif" },
+    { id: "graphic-phone", path: "./resources/graphic/graphic (19).jfif" },
     { id: "dirt-phone", path: "./resources/dirt/dirt (10).jfif" },
     { id: "etherial-phone", path: "./resources/etherial/etherial (19).jfif" },
     { id: "garden-phone", path: "./resources/garden/garden (6).jpg" },
+    { id: "flaura-phone", path: "./resources/flaura/flaura (8).jfif" },
     // Add more phone categories as needed
 ];
 
 const desktopCategories = [
     { id: "medieval", path: "./resources/images/1 (17).jfif" },
     { id: "trinkets", path: "./resources/trinkets/trinkets (2).jfif" },
-    { id: "flaura", path: "./resources/flaura/flaura (8).jfif" },
+    { id: "graphic", path: "./resources/graphic/graphic (19).jfif" },
     { id: "dirt", path: "./resources/dirt/dirt (10).jfif" },
     { id: "etherial", path: "./resources/etherial/etherial (19).jfif" },
     { id: "garden", path: "./resources/garden/garden (6).jpg" },
+    { id: "flaura", path: "./resources/flaura/flaura (8).jfif" },
     // Add more phone categories as needed
 ];
 
@@ -233,7 +235,7 @@ const categories = [
             { path: "./resources/garden/garden (3).jfif", text: "unsure" },
             { path: "./resources/garden/garden (4).jfif", text: "unsure" },
             { path: "./resources/garden/garden (5).jfif", text: "unsure" },
-            { path: "./resources/garden/garden (6).jfif", text: "jeff hamada" },
+            { path: "./resources/garden/garden (6).jpg", text: "jeff hamada" },
             { path: "./resources/garden/garden (7).jfif", text: "unsure" },
             { path: "./resources/garden/garden (8).jfif", text: "unsure" },
             { path: "./resources/garden/garden (9).jfif", text: "unsure" },
@@ -247,10 +249,52 @@ const categories = [
             { path: "./resources/garden/garden (17).jfif", text: "unsure" },
         ]
     },
+    {
+        name: "graphic",
+        images: [
+            { path: "./resources/graphic/graphic (1).jfif", text: "Paul-Ãmile" },
+            { path: "./resources/graphic/graphic (1).jpg", text: "unsure" },
+            { path: "./resources/graphic/graphic (2).jfif", text: "hyunjung huh" },
+            { path: "./resources/graphic/graphic (3).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (4).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (5).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (6).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (7).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (8).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (9).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (10).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (11).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (12).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (13).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (14).jfif", text: "@kylie_francis" },
+            { path: "./resources/graphic/graphic (15).jfif", text: "demande spéciale" },
+            { path: "./resources/graphic/graphic (16).jfif", text: "marie léon" },
+            { path: "./resources/graphic/graphic (17).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (18).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (19).jfif", text: "@eeeeelllfffyyyyyyyyy" },
+            { path: "./resources/graphic/graphic (20).jfif", text: "doyald young" },
+            { path: "./resources/graphic/graphic (21).jfif", text: "cherry ling" },
+            { path: "./resources/graphic/graphic (22).jfif", text: "marian bantjes" },
+            { path: "./resources/graphic/graphic (23).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (24).jfif", text: "unsure" },
+            { path: "./resources/graphic/graphic (25).jfif", text: "mike lopez" },
+            { path: "./resources/graphic/graphic (26).jfif", text: "oscar woodiwiss" },
+            { path: "./resources/graphic/graphic (27).jfif", text: "josse pyl" },
+            { path: "./resources/graphic/graphic (28).jfif", text: "unsure" },
+        ]
+    },
 ];
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 
 // Function to generate image HTML for a category
 function generateImageHTML(category) {
+    shuffleArray(category.images);
     const imageHTML = category.images.map(image => `
             <div class="image-box">
                 <img src="${image.path}" alt="">
@@ -318,6 +362,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'dirt', boxClass: '.dirt-images', inactiveImage: './resources/dirt/dirt (10).jfif', activeImage: './resources/blue_thumbnails/dirt.webp' },
         { id: 'etherial', boxClass: '.etherial-images', inactiveImage: './resources/etherial/etherial (19).jfif', activeImage: './resources/blue_thumbnails/etherial.webp' },
         { id: 'garden', boxClass: '.garden-images', inactiveImage: './resources/garden/garden (6).jpg', activeImage: './resources/blue_thumbnails/garden.webp' },
+        { id: 'graphic', boxClass: '.graphic-images', inactiveImage: './resources/graphic/graphic (19).jfif', activeImage: './resources/blue_thumbnails/graphic.webp' },
         // Add more boxes in the future as needed
     ];
 
@@ -347,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
             boxElement.style.display = 'flex';
 
             trigger.src = box.activeImage;
-            trigger.style.opacity = 0.85;
+            trigger.style.opacity = 0.75;
 
             setTimeout(function () {
                 Array.from(imageBox).forEach(function (imageBoxs) {
@@ -420,6 +465,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'dirt-phone', boxClass: '.dirt-images-phone', inactiveImage: './resources/dirt/dirt (10).jfif', activeImage: './resources/blue_thumbnails/dirt.webp' },
         { id: 'etherial-phone', boxClass: '.etherial-images-phone', inactiveImage: './resources/etherial/etherial (19).jfif', activeImage: './resources/blue_thumbnails/etherial.webp' },
         { id: 'garden-phone', boxClass: '.garden-images-phone', inactiveImage: './resources/garden/garden (6).jpg', activeImage: './resources/blue_thumbnails/garden.webp' },
+        { id: 'graphic-phone', boxClass: '.graphic-images-phone', inactiveImage: './resources/graphic/graphic (19).jfif', activeImage: './resources/blue_thumbnails/graphic.webp' },
         // Add more boxes in the future as needed
     ];
 
@@ -446,8 +492,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // If the box is not active, show it
             closeAllBoxes();
             boxElement.style.display = 'flex';
+
             trigger.src = box.activeImage;
-            trigger.style.opacity = 0.85;
+            trigger.style.opacity = 0.75;
 
             setTimeout(function () {
                 Array.from(imageBox).forEach(function (imageBoxs) {

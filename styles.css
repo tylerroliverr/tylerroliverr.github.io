@@ -112,6 +112,8 @@ a {
 
 .images-grid img {
     width: 120px;
+    height: 120px;
+    object-fit: cover;
 }
 
 .images-grid p {
@@ -137,7 +139,7 @@ a {
 } */
 
 .image-hover-wrapper img {
-    height: 350px;
+    height: 600px;
 }
 
 .image-box {
@@ -214,11 +216,15 @@ a {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        max-height: 100vh;
         width: fit-content;
+        overflow-y: auto;
     }
 
     .phone-grid img {
         width: 80px;
+        height: 80px;
+        object-fit: cover;
     }
 
     /* .phone-hover {
