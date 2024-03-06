@@ -21,7 +21,7 @@ const phoneCategories = [
     { id: "dirt-phone", path: "./resources/dirt/dirt (10).jfif" },
     { id: "etherial-phone", path: "./resources/etherial/etherial (19).jfif" },
     { id: "garden-phone", path: "./resources/garden/garden (6).jpg" },
-    { id: "flaura-phone", path: "./resources/flaura/flaura (8).jfif" },
+    // { id: "flaura-phone", path: "./resources/flaura/flaura (8).jfif" },
     // Add more phone categories as needed
 ];
 
@@ -32,7 +32,7 @@ const desktopCategories = [
     { id: "dirt", path: "./resources/dirt/dirt (10).jfif" },
     { id: "etherial", path: "./resources/etherial/etherial (19).jfif" },
     { id: "garden", path: "./resources/garden/garden (6).jpg" },
-    { id: "flaura", path: "./resources/flaura/flaura (8).jfif" },
+    // { id: "flaura", path: "./resources/flaura/flaura (8).jfif" },
     // Add more phone categories as needed
 ];
 
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var boxes = [
         { id: 'medieval', boxClass: '.medieval-images', inactiveImage: './resources/images/1 (17).jfif', activeImage: './resources/blue_thumbnails/armour.jfif' },
-        { id: 'flaura', boxClass: '.flaura-images', inactiveImage: './resources/flaura/flaura (8).jfif', activeImage: './resources/blue_thumbnails/flaura.webp' },
+        // { id: 'flaura', boxClass: '.flaura-images', inactiveImage: './resources/flaura/flaura (8).jfif', activeImage: './resources/blue_thumbnails/flaura.webp' },
         { id: 'trinkets', boxClass: '.trinkets-images', inactiveImage: './resources/trinkets/trinkets (2).jfif', activeImage: './resources/blue_thumbnails/trinkets.jfif' },
         { id: 'dirt', boxClass: '.dirt-images', inactiveImage: './resources/dirt/dirt (10).jfif', activeImage: './resources/blue_thumbnails/dirt.webp' },
         { id: 'etherial', boxClass: '.etherial-images', inactiveImage: './resources/etherial/etherial (19).jfif', activeImage: './resources/blue_thumbnails/etherial.webp' },
@@ -460,7 +460,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var boxes = [
         { id: 'medieval-phone', boxClass: '.medieval-images-phone', inactiveImage: './resources/images/1 (17).jfif', activeImage: './resources/blue_thumbnails/armour.jfif' },
-        { id: 'flaura-phone', boxClass: '.flaura-images-phone', inactiveImage: './resources/flaura/flaura (8).jfif', activeImage: './resources/blue_thumbnails/flaura.webp' },
+        // { id: 'flaura-phone', boxClass: '.flaura-images-phone', inactiveImage: './resources/flaura/flaura (8).jfif', activeImage: './resources/blue_thumbnails/flaura.webp' },
         { id: 'trinkets-phone', boxClass: '.trinkets-images-phone', inactiveImage: './resources/trinkets/trinkets (2).jfif', activeImage: './resources/blue_thumbnails/trinkets.jfif' },
         { id: 'dirt-phone', boxClass: '.dirt-images-phone', inactiveImage: './resources/dirt/dirt (10).jfif', activeImage: './resources/blue_thumbnails/dirt.webp' },
         { id: 'etherial-phone', boxClass: '.etherial-images-phone', inactiveImage: './resources/etherial/etherial (19).jfif', activeImage: './resources/blue_thumbnails/etherial.webp' },
