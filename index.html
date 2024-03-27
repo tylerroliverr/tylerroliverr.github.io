@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/styles.css">  
+    <link rel="icon" type="image/x-icon" href="/resources/images/thats chic website.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+    <title>That's Chic | Home</title>
+</head>
+
+<body class="fade-in">
+
+    <!-- ----- CUSTOM CURSOR ----- -->
+    <div id="cursor-container">
+        <div id="custom-cursor"></div>
+    </div>
+
+    <!-- ----- FIXED LOGOS ----- -->
+    <div class="logo-svg-div">
+        <a href="#hero-section">
+            <img class="logo-svg link" src="./resources/images/TCMiniLogo.png" alt="">
+        </a>
+    </div>
+
+    <div class="full-logo-svg-div">
+        <a href="#hero-section">
+            <img class="full-logo-svg link" src="./resources/images/TCFullLogo.png" alt="">
+        </a>
+    </div>
+
+    <!-- ----- HERO SECTION ----- -->
+    <section class="hero-section" id="hero-section">
+        <div class="rotating-hero-div">
+            <img class="hero-logo" src="./resources/images/TCFullLogo.png" alt="">
+            <img class="hero-sub-logo" src="./resources/images/TC Logo Image.png" alt="">
+        </div>
+    </section>
+
+    <!-- ----- QUOTE SECTION ----- -->
+    <div class="space after-hero"></div>
+
+    <section class="prologue-section">
+        <div class="prologue-svg">
+            <img src="./resources/images/homepage_prologue.svg" alt="">
+        </div>
+    </section>
+
+    <div class="space after-prologue"></div>
+
+    <!-- ----- NAVIGATION SECTION ----- -->
+    <div class="nav-div" id="sticky-nav">
+
+        <div class="memories nav-item" id="memories-text">
+            <a href="#memories-feed" class="nav-text link memories-active-text">memories</a>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="chaos nav-item" id="chaos-text">
+            <a href="./chaos.html" class="nav-text link">chaos</a>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="system nav-item" id="system-text">
+            <a href="./system.html" class="nav-text link">system</a>
+        </div>
+    </div>
+
+    <!-- ----- HOVER NAV CONTAINER ----- -->
+    <div class="hover-fixed-container"> <!-- acts like the custom cursor div -->
+        <div class="hoverContainer">
+            <img id="memories-hover" class="hoverstate-img" src="/resources/images/memories-hover.webp" alt="">
+            <img id="chaos-hover" class="hoverstate-img" src="/resources/images/chaos-hover.png" alt="">
+            <img id="system-hover" class="hoverstate-img" src="/resources/images/system-hover.webp" alt="">
+        </div>
+    </div>
+
+    <div class="space after-nav"></div>
+    <div class="space before-memories"></div>
+
+    <!-- ----- MEMORIES SECTION ----- -->
+    <div id="memories-feed">
+    </div>
+
+    <!-- ----- DUOTONE SECTION ----- -->
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="duotone">
+                <feColorMatrix type="matrix" result="grayscale" values="1 0 0 0 0
+                        1 0 0 0 0
+                        1 0 0 0 0
+                        0 0 0 1 0">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB" result="duotone" id="duotone-component">
+                </feComponentTransfer>
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- ----- FOOTER SECTION ----- -->
+    <div class="space"></div>
+    <section class="footer-section">
+        <div class="footer-div">
+            <p class="footer link">hello</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.28/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./sticky-nav-hover.js"></script>
+    <script src="./memories-feed.js"></script>
+
+</body>
+
+</html>
