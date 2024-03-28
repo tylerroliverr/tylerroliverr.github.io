@@ -380,6 +380,8 @@ a {
     justify-content: center;
     margin-top: 2rem;
     mix-blend-mode: darken;
+    position: relative;
+    z-index: 2;
 }
 
 .chaos-column {
@@ -486,6 +488,18 @@ a {
                 transform: translateX(0);
         opacity: 1;
     }
+}
+
+.loading-chaos {
+    position: fixed;
+    top: 50%;
+    left: 47%;
+    z-index: 1;
+    transition: opacity 0.4s ease-out;
+    display: flex;
+    height: 100vh;
+    font-family: var(--snell-font);
+    font-size: 3rem;
 }
 
 /* ----------------------------- SYSTEM SECTION --------------------------------- */

@@ -77,5 +77,7 @@ getImages();
 
 function slideFromRight() {
     const chaosFeed = document.getElementById('chaos-feed');
+    const loaderChaos = document.querySelector('.loading-chaos');
     chaosFeed.classList.add('active');
+    loaderChaos.style.opacity = '0';
 }
