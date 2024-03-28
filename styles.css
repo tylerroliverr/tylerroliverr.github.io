@@ -171,17 +171,25 @@ a {
 }
 
 .prologue-svg {
+    mix-blend-mode: difference;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 30%;
-    height: 100vh;
+}
+
+.prologue-svg p {
+    font-family: var(--snell-font);
+    font-size: 3.8rem;
+    font-weight: 100;
+    color: var(--difference-pink-clr);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 /* ------------------------------ NAV SECTION -------------------------- */
@@ -340,9 +348,9 @@ a {
 
 .memories-feed-img:hover {
     /* filter: none; */
-    -webkit-transform: scale(1.05);
+    /* -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
-            transform: scale(1.05);
+            transform: scale(1.05); */
     opacity: 1;
     /* object-fit: contain; */
 }
